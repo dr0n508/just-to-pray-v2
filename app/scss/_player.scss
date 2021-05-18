@@ -1,4 +1,3 @@
-
 .audio-player {
   display: flex;
   height: 70px;
@@ -6,106 +5,99 @@
   background: #13294A;
   font-family: $default;
   color: white;
-  //overflow: hidden;
-
-  //grid-template-rows: 6px auto;
-}
-.audio-player .timeline {
-  flex-grow: 1;
-  background: #040f1d;
-  border-radius: 5px;
-  width: 150px;
-  height: 10px;
-  position: relative;
-  cursor: pointer;
-  box-shadow: 0 2px 10px 0 #0008;
-  margin-right: 10px;
-}
-.audio-player .timeline .progress {
-  background: $accent;
-  border-radius: 5px;
-  min-width: 10px;
-  width: 0%;
-  height: 100%;
-  transition: 0.25s;
-
-  position: absolute;
-  left: 0;
-
-  &:after {
-
-    content: "";
-    position: absolute;
-    right: -2px;
-    top: 0px;
-    width: 10px;
+  .timeline {
+    flex-grow: 1;
+    background: #040f1d;
+    border-radius: 5px;
+    width: 150px;
     height: 10px;
-    border-radius: 50%;
-    display: block;
-    background-color: $accent;
-    z-index: 99;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 2px 10px 0 #0008;
+    margin-right: 10px;
+    .progress {
+      background: $accent;
+      border-radius: 5px;
+      min-width: 10px;
+      width: 0%;
+      height: 100%;
+      transition: 0.25s;
+      position: absolute;
+      left: 0;
+      &:after {
+        content: "";
+        position: absolute;
+        right: -2px;
+        top: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        display: block;
+        background-color: $accent;
+        z-index: 99;
+      }
+    }
+  }
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 0 20px;
+    .name {
+      opacity: 0;
+    }
+    .play-container {
+      width: 30px;
+      flex-shrink: 0;
+    }
+    .toggle-play.play {
+      cursor: pointer;
+      position: relative;
+      left: 0;
+      height: 0;
+      width: 0;
+      border: 10px solid #0000;
+      border-left: 18px solid white;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+    .toggle-play.pause {
+      height: 15px;
+      width: 20px;
+      cursor: pointer;
+      position: relative;
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0px;
+        background: white;
+        content: "";
+        height: 15px;
+        width: 3px;
+      }
+      &:after {
+        position: absolute;
+        top: 0;
+        right: 8px;
+        background: white;
+        content: "";
+        height: 15px;
+        width: 3px;
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .controls > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
-  }
-}
-.audio-player .controls {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  align-items: center;
-  padding: 0 20px;
-  .name {
-    opacity: 0;
-  }
-  .play-container {
-    width: 30px;
-    flex-shrink: 0;
-    //margin-right: 5px;
-  }
-}
-.audio-player .controls > * {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.audio-player .controls .toggle-play.play {
-  cursor: pointer;
-  position: relative;
-  left: 0;
-  height: 0;
-  width: 0;
-  border: 10px solid #0000;
-  border-left: 18px solid white;
-}
-.audio-player .controls .toggle-play.play:hover {
-  transform: scale(1.05);
-}
-.audio-player .controls .toggle-play.pause {
-  height: 15px;
-  width: 20px;
-  cursor: pointer;
-  position: relative;
-}
-.audio-player .controls .toggle-play.pause:before {
-  position: absolute;
-  top: 0;
-  left: 0px;
-  background: white;
-  content: "";
-  height: 15px;
-  width: 3px;
-}
-.audio-player .controls .toggle-play.pause:after {
-  position: absolute;
-  top: 0;
-  right: 8px;
-  background: white;
-  content: "";
-  height: 15px;
-  width: 3px;
-}
-.audio-player .controls .toggle-play.pause:hover {
-  transform: scale(1.1);
-}
 .audio-player .controls .time {
   display: flex;
   width: 50px;
@@ -141,10 +133,6 @@
 }
 .audio-player .controls .volume-container .volume-slider {
   position: relative;
-  //left: -3px;
-  //top: 24px;
-  //z-index: -1;
-  //width: 0;
   height: 10px;
   border-radius: 6px;
   background: #040f1d;
@@ -158,15 +146,7 @@
   border-radius: 5px;
 }
 .audio-player .controls .volume-container .volume-slider {
-  //left: -123px;
   width: 70px;
-}
-
-
-//custom
-
-.volume-slider {
-  //width: 100% !important;
 }
 
 .volume.icon-audio, .volume.icon-mute {
@@ -174,19 +154,5 @@
   margin-right: 5px;
   @media (max-width: 450px) {
     font-size: 22px;
-  }
-}
-.volume.icono-volumeMedium2 {
-  //width: 20px;
-  //height: 20px;
-  //display: block;
-  //background-color: red;
-  //position: relative;
-  &:before {
-    //content: "\e900" !important;
-    //position: absolute;
-    //color: white;
-    //font-size: 20px;
-    //font-family: icomoon;
   }
 }
