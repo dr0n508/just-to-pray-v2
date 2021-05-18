@@ -4,7 +4,7 @@
 @import "video";
 @import "buttons";
 @import "player";
-@import "filter";
+@import "slider_filter";
 @import "footer";
 
 ::-webkit-input-placeholder {
@@ -423,28 +423,28 @@ h2.h2 {
     max-width: 1010px;
   }
   .menu-filter {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-bottom: 50px;
+    //display: flex;
+    //align-items: center;
+    //justify-content: space-around;
+    //margin-bottom: 50px;
     .btn-filter {
-      display: inline-block;
-      background: none;
-      border: none;
-      outline: none;
-      color: $text;
-      padding: 5px 10px;
-      font-size: 20px;
-      font-weight: 500;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      border-bottom: solid 3px transparent;
+      //display: inline-block;
+      //background: none;
+      //border: none;
+      //outline: none;
+      //color: $text;
+      //padding: 5px 10px;
+      //font-size: 20px;
+      //font-weight: 500;
+      //letter-spacing: 3px;
+      //text-transform: uppercase;
+      //border-bottom: solid 3px transparent;
       &:hover {
-        border-bottom: solid 3px $accent;
+        //border-bottom: solid 3px $accent;
       }
     }
     .btn-filter.active-filter {
-      border-bottom: solid 3px $accent;
+      //border-bottom: solid 3px $accent;
     }
   }
 

@@ -24,10 +24,8 @@
 	<!-- Style -->
   <link rel='stylesheet' href='https://icono-49d6.kxcdn.com/icono.min.css'>
 
-
-  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-  <!--// Add the new slick-theme.css if you want the default styling-->
-  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
 
 	<link rel="stylesheet" href="css/main.min.css">
@@ -247,117 +245,146 @@
 
 
       <div class="menu-filter" id="myBtnContainer">
-        <button class="btn-filter active-filter" data-value="" onclick="filterSelection('all')">All</button>
-        <button class="btn-filter" data-value=".js-requests" onclick="filterSelection('js-requests')">Prayer Requests</button>
-        <button class="btn-filter" data-value=".js-answered" onclick="filterSelection('js-answered')">Answered Prayers</button>
+        <!--<button class="btn-filter active-filter" data-value="" onclick="filterSelection('all')">All</button>-->
+        <!--<button class="btn-filter" data-value=".js-requests" onclick="filterSelection('js-requests')">Prayer Requests</button>-->
+        <!--<button class="btn-filter" data-value=".js-answered" onclick="filterSelection('js-answered')">Answered Prayers</button>-->
       </div>
 
       <ul class="list-prayers grid-wrap slider">
-        <li class="item-filter js-requests">
-          <div class="prayer">
-            <div class="content-prayer">
-              <div class="text-center">
-                <img src="img/icons/01.svg" alt="">
-              </div>
 
-              <h3 class="h3-underline name-prayer">Anna – Mississauga, Ontario</h3>
-
-              <p>Thank you Michael Ellison for being a man of prayer and sharing it with us, your customers.</p>
-
-              <p class="date">May 17, 2021</p>
-
-              <button class="btn-color" onclick="return countPrayer(this)" data-count="0">Pray</button>
-            </div>
-
-            <div class="footer-prayer">
-              <div class="spacer"></div>
-              <p class="number-prayers"><span>9</span> Prayers</p>
-              <a href="#" class="btn-flag" onclick="return flagPrayer(this)"></a>
-            </div>
-
-          </div>
-        </li>
-
-        <li class="item-filter js-answered">
-          <div class="prayer">
-            <div class="content-prayer">
-              <div class="text-center">
-                <img src="img/icons/02.svg" alt="">
-              </div>
-
-              <h3 class="h3-underline name-prayer">Brian – Kansas City, Missouri</h3>
-
-              <p>Praying for my son that he gets treatment for his
-                mental health issues and finds a job and a place to
-                live</p>
-
-              <p class="date">March 08, 2021</p>
-
-              <button class="btn-color" data-count="0">Rejoice</button>
-            </div>
-
-            <div class="footer-prayer">
-              <div class="spacer"></div>
-              <p class="number-prayers"><span>7</span> Rejoicing</p>
-              <a href="#" class="btn-flag"></a>
-            </div>
-
-          </div>
-        </li>
-
-        <li class="item-filter js-requests">
-          <div class="prayer">
-            <div class="content-prayer">
-              <div class="text-center">
-                <img src="img/icons/01.svg" alt="">
-              </div>
-
-              <h3 class="h3-underline name-prayer">Anna – Mississauga, Ontario</h3>
-
-              <p>Thank you Michael Ellison for being a man of prayer and sharing it with us, your customers.</p>
-
-              <p class="date">May 17, 2021</p>
-
-              <button class="btn-color" onclick="return countPrayer(this)" data-count="0">Pray</button>
-            </div>
-
-            <div class="footer-prayer">
-              <div class="spacer"></div>
-              <p class="number-prayers"><span>9</span> Prayers</p>
-              <a href="#" class="btn-flag" onclick="return flagPrayer(this)"></a>
-            </div>
-
-          </div>
-        </li>
-
-        <li class="item-filter js-answered">
-          <div class="prayer">
-            <div class="content-prayer">
-              <div class="text-center">
-                <img src="img/icons/02.svg" alt="">
-              </div>
-
-              <h3 class="h3-underline name-prayer">Brian – Kansas City, Missouri</h3>
-
-              <p>Praying for my son that he gets treatment for his
-                mental health issues and finds a job and a place to
-                live</p>
-
-              <p class="date">March 08, 2021</p>
-
-              <button class="btn-color" data-count="0">Rejoice</button>
-            </div>
-
-            <div class="footer-prayer">
-              <div class="spacer"></div>
-              <p class="number-prayers"><span>7</span> Rejoicing</p>
-              <a href="#" class="btn-flag"></a>
-            </div>
-
-          </div>
-        </li>
 
       </ul>
+
+
+
+        <ul class="swiper-container swiper-filter">
+          <li><a data-filter="" class="swiper-active">All</a></li>
+          <li><a data-filter=".filter1">Prayer Requests</a></li>
+          <li><a data-filter=".filter2">Answered Prayers</a></li>
+        </ul>
+
+        <div class="swiper-container swiper-prayers">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide filter1">
+              <li class="item-filter">
+                <div class="prayer">
+                  <div class="content-prayer">
+                    <div class="text-center">
+                      <img src="img/icons/01.svg" alt="">
+                    </div>
+
+                    <h3 class="h3-underline name-prayer">Anna – Mississauga, Ontario</h3>
+
+                    <p>Thank you Michael Ellison for being a man of prayer and sharing it with us, your customers.</p>
+
+                    <p class="date">May 17, 2021</p>
+
+                    <button class="btn-color" onclick="return countPrayer(this)" data-count="0">Pray</button>
+                  </div>
+
+                  <div class="footer-prayer">
+                    <div class="spacer"></div>
+                    <p class="number-prayers"><span>9</span> Prayers</p>
+                    <a href="#" class="btn-flag" onclick="return flagPrayer(this)"></a>
+                  </div>
+
+                </div>
+              </li>
+            </div>
+            <div class="swiper-slide filter2">
+              <li class="item-filter">
+                <div class="prayer">
+                  <div class="content-prayer">
+                    <div class="text-center">
+                      <img src="img/icons/02.svg" alt="">
+                    </div>
+
+                    <h3 class="h3-underline name-prayer">Brian – Kansas City, Missouri</h3>
+
+                    <p>Praying for my son that he gets treatment for his
+                      mental health issues and finds a job and a place to
+                      live</p>
+
+                    <p class="date">March 08, 2021</p>
+
+                    <button class="btn-color" data-count="0">Rejoice</button>
+                  </div>
+
+                  <div class="footer-prayer">
+                    <div class="spacer"></div>
+                    <p class="number-prayers"><span>7</span> Rejoicing</p>
+                    <a href="#" class="btn-flag"></a>
+                  </div>
+
+                </div>
+              </li>
+            </div>
+            <div class="swiper-slide filter1">
+              <li class="item-filter">
+              <div class="prayer">
+                <div class="content-prayer">
+                  <div class="text-center">
+                    <img src="img/icons/01.svg" alt="">
+                  </div>
+
+                  <h3 class="h3-underline name-prayer">Anna – Mississauga, Ontario</h3>
+
+                  <p>Thank you Michael Ellison for being a man of prayer and sharing it with us, your customers.</p>
+
+                  <p class="date">May 17, 2021</p>
+
+                  <button class="btn-color" onclick="return countPrayer(this)" data-count="0">Pray</button>
+                </div>
+
+                <div class="footer-prayer">
+                  <div class="spacer"></div>
+                  <p class="number-prayers"><span>9</span> Prayers</p>
+                  <a href="#" class="btn-flag" onclick="return flagPrayer(this)"></a>
+                </div>
+
+              </div>
+            </li>
+            </div>
+            <div class="swiper-slide filter1">
+              <li class="item-filter">
+                <div class="prayer">
+                  <div class="content-prayer">
+                    <div class="text-center">
+                      <img src="img/icons/02.svg" alt="">
+                    </div>
+
+                    <h3 class="h3-underline name-prayer">Brian – Kansas City, Missouri</h3>
+
+                    <p>Praying for my son that he gets treatment for his
+                      mental health issues and finds a job and a place to
+                      live</p>
+
+                    <p class="date">March 08, 2021</p>
+
+                    <button class="btn-color" data-count="0">Rejoice</button>
+                  </div>
+
+                  <div class="footer-prayer">
+                    <div class="spacer"></div>
+                    <p class="number-prayers"><span>7</span> Rejoicing</p>
+                    <a href="#" class="btn-flag"></a>
+                  </div>
+
+                </div>
+              </li>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- If we need scrollbar -->
+          <!--<div class="swiper-scrollbar"></div>-->
+
+        </div>
+
 
 
 
@@ -401,16 +428,15 @@
 		<p class="text-center">© Copyright TriVita, Inc. 2021</p>
 	</div>
 </footer>
-	<script  src="js/player.js"></script>
-<!--<script src="libs/jquery/jquery.min.js"></script>-->
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script  src="js/player.js"></script>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 
-
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-<!--<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>-->
-<!--<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
-<script type="text/javascript" src="slick/slick.min.js"></script>
-
+<script src="js/slider_filter.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

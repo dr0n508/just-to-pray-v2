@@ -515,21 +515,66 @@
   left: -123px;
   width: 120px; }
 
-.grid-wrap {
-  line-height: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  grid-template-rows: auto 1fr auto;
-  grid-gap: 0px; }
+.swiper-filter {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  margin-bottom: 50px; }
+  .swiper-filter li a {
+    cursor: pointer;
+    display: inline-block;
+    background: none;
+    border: none;
+    outline: none;
+    color: #13294A;
+    padding: 5px 0;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border-bottom: solid 3px transparent; }
+    .swiper-filter li a:hover {
+      border-bottom: solid 3px #A9C370; }
+  .swiper-filter li a.swiper-active {
+    border-bottom: solid 3px #A9C370; }
 
-.grid-wrap .item-filter {
-  overflow: hidden;
-  display: none; }
+.swiper-slide {
+  /* a single column layout */
+  width: 100%; }
 
-.grid-wrap .show {
-  display: block;
-  -webkit-animation: enter .3s forwards;
-          animation: enter .3s forwards; }
+@media (min-width: 31.25em) {
+  .swiper-slide {
+    /* swiper is disabled at this breakpoint */
+    /* going for a 2 column layout here */
+    width: 50%; } }
+
+@media (min-width: 43.75em) {
+  .swiper-slide {
+    /* upping it to a 3 column layout */
+    width: 50%; } }
+
+@media (min-width: 53em) {
+  .swiper-slide {
+    /* and finally the 4 column layout */ } }
+
+.swiper-pagination {
+  /* show on small viewports */
+  display: block; }
+
+@media (min-width: 31.25em) {
+  .swiper-pagination {
+    /* swiper is disabled at this breakpoint */
+    display: none; }
+  .swiper-button-prev, .swiper-button-next {
+    display: none; } }
 
 /*-- FOOTER --*/
 .footer {
@@ -922,35 +967,6 @@ h2.h2 {
   padding: 300px 0 100px; }
   .prayer-details .container {
     max-width: 1010px; }
-  .prayer-details .menu-filter {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-justify-content: space-around;
-        -ms-flex-pack: distribute;
-            justify-content: space-around;
-    margin-bottom: 50px; }
-    .prayer-details .menu-filter .btn-filter {
-      display: inline-block;
-      background: none;
-      border: none;
-      outline: none;
-      color: #13294A;
-      padding: 5px 10px;
-      font-size: 20px;
-      font-weight: 500;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      border-bottom: solid 3px transparent; }
-      .prayer-details .menu-filter .btn-filter:hover {
-        border-bottom: solid 3px #A9C370; }
-    .prayer-details .menu-filter .btn-filter.active-filter {
-      border-bottom: solid 3px #A9C370; }
   .prayer-details .list-prayers {
     max-width: 1060px;
     display: -webkit-box;
