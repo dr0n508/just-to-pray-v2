@@ -1,0 +1,105 @@
+.btn-color {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 12px 30px;
+  background-color: $accent;
+  color: white;
+  font-family: $default;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 35px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  &:hover {
+    color: white;
+    background-color: $text;
+  }
+}
+
+.btn-transparent {
+  min-width: 280px;
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 12px 30px;
+  background-color: transparent;
+  color: $text;
+  font-family: $default;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 35px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  &:hover {
+    color: white;
+  }
+}
+
+.btn-play {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  background-color: $text;
+  position: relative;
+  flex-shrink: 0;
+  &:before {
+    position: absolute;
+    content: "";
+    right: 50%;
+    top: 50%;
+    transform: translate(50%,-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 14px 0 14px 24px;
+    border-color: transparent transparent transparent white;
+  }
+  &:hover {
+    background-color: $accent;
+  }
+  @media (max-width: 768px) {
+    width: 45px;
+    height: 45px;
+    &:before {
+      border-width: 8px 0 8px 15px;
+    }
+  }
+}
+
+.btn-flag {
+  width: 33px;
+  height: 33px;
+  border: solid 1px $text;
+  position: relative;
+  &:after {
+    content: "\e90b";
+    position: absolute;
+    font-family: icomoon;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+  &:hover {
+    background-color: $text;
+    &:after {
+      color: white;
+    }
+  }
+}
+
+.btn-up {
+  position: relative;
+  display: block;
+  width: 70px;
+  height: 70px;
+  background-color: $accent;
+  &:after {
+    position: absolute;
+    content: "\e911";
+    font-family: icomoon;
+    font-size: 24px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+}
