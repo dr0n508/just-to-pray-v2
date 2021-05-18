@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   li {
     a {
       cursor: pointer;
@@ -24,6 +24,60 @@
     a.swiper-active {
       border-bottom: solid 3px $accent;
     }
+  }
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: flex-start;
+    li {
+      margin-bottom: 10px;
+      &:first-child {
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
+
+@media (max-width: 31.25em) {
+  .swiper-wrapper {
+    padding-bottom: 70px;
+  }
+}
+
+@media (min-width: 31.25em) {
+  .swiper-wrapper {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 36px;
+  height: 36px;
+  background-color: $accent;
+  bottom: 0!important;
+  top: auto !important;
+}
+
+
+.swiper-button-prev:after {
+  content: "\e909";
+  font-family: icomoon;
+  font-size: 20px;
+  color: white;
+}
+
+.swiper-button-next:after {
+  content: "\e90a";
+  font-family: icomoon;
+  font-size: 20px;
+  color: white;
+}
+
+.swiper-pagination {
+  bottom: -50px;
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: $accent;
   }
 }
 
@@ -49,8 +103,12 @@
 
 @media (min-width: 53em) {
   .swiper-slide  {
-    /* and finally the 4 column layout */
-    //width: 25%;
+    padding: 25px;
+    //display: flex;
+    //align-self: stretch;
+    //justify-content: stretch;
+    //justify-items: stretch;
+
   }
 }
 

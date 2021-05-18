@@ -331,6 +331,9 @@ h2.h2 {
   background-color: #F6F6F6;
   padding: 100px 0;
   margin-bottom: 100px;
+  @media (max-width: 767px) {
+    margin-bottom: 0;
+  }
   .container {
     max-width: 1010px;
   }
@@ -386,9 +389,11 @@ h2.h2 {
 
 ///////////prayers-copy///////////
 .prayers-copy {
+  position: relative;
   max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: -200px;
   padding: 90px 0;
   background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),url("../img/prayers-copy-bg.jpg") no-repeat 50% 50%;
   background-size: cover;
@@ -422,50 +427,18 @@ h2.h2 {
   .container {
     max-width: 1010px;
   }
-  .menu-filter {
-    //display: flex;
-    //align-items: center;
-    //justify-content: space-around;
-    //margin-bottom: 50px;
-    .btn-filter {
-      //display: inline-block;
-      //background: none;
-      //border: none;
-      //outline: none;
-      //color: $text;
-      //padding: 5px 10px;
-      //font-size: 20px;
-      //font-weight: 500;
-      //letter-spacing: 3px;
-      //text-transform: uppercase;
-      //border-bottom: solid 3px transparent;
-      &:hover {
-        //border-bottom: solid 3px $accent;
-      }
-    }
-    .btn-filter.active-filter {
-      //border-bottom: solid 3px $accent;
-    }
+
+  .swiper-prayers {
+    margin-bottom: 100px;
   }
 
-  .list-prayers {
-    max-width: 1060px;
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
+  .swiper-slide {
 
-    .item-filter {
-      width: 50%;
-      padding: 25px;
-      //display: flex;
-
-    }
   }
+
 
   .prayer {
     background-color: white;
-    //width: 50%;
-    //margin-bottom: 50px;
     .btn-color {
       width: 100%;
     }
@@ -473,6 +446,9 @@ h2.h2 {
       padding: 30px 68px;
       img {
         margin-bottom: 30px;
+      }
+      @media (max-width: 767px) {
+        padding: 20px 30px;
       }
     }
     .footer-prayer {
@@ -511,9 +487,24 @@ h2.h2 {
   .video-block {
     width: 56%;
     position: absolute;
-    right: 0;
+    right: 15px;
     bottom: 0%;
     transform: translateY(70px);
+  }
+  @media (max-width: 992px) {
+    .text-block {
+      width: 100%;
+      padding: 80px 40px 130px 40px;
+    }
+    .video-block {
+      width: 90%;
+      position: relative;
+      margin-right: auto;
+      margin-left: auto;
+      right: auto;
+      transform: translateY(-70px);
+    }
+
   }
 }
 

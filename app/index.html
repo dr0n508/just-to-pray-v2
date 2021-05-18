@@ -150,14 +150,31 @@
                   <option value="http://www.justprayit.com/wp-content/uploads/Prayer_Grieving.mp3">Prayer for Grieving</option>
                 </select>
               </div>
-
-
             </div>
+
+            <!--<div class="player-v2">-->
+              <!--<div id="audio-player-container">-->
+                <!--<audio src="https://assets.codepen.io/4358584/Anitek_-_Komorebi.mp3" preload="metadata" loop></audio>-->
+                <!--<p>audio player ish</p>-->
+                <!--<button id="play-icon"></button>-->
+                <!--<span id="current-time" class="time">0:00</span>-->
+                <!--<input type="range" id="seek-slider" max="100" value="0">-->
+                <!--<span id="duration" class="time">0:00</span>-->
+                <!--<output id="volume-output">100</output>-->
+                <!--<input type="range" id="volume-slider" max="100" value="100">-->
+                <!--<button id="mute-icon"></button>-->
+              <!--</div>-->
+            <!--</div>-->
+
+
+
             <div class="audio-block">
               <div class="audio-player" style="margin: 0 auto">
-                <div class="timeline">
-                  <div class="progress"></div>
-                </div>
+
+                <!--<div class="timeline">-->
+                  <!--<div class="progress"></div>-->
+                <!--</div>-->
+
                 <div class="controls">
                   <div class="play-container">
                     <div class="toggle-play play">
@@ -165,11 +182,19 @@
                   </div>
                   <div class="time">
                     <div class="current">0:00</div>
-                    <div class="divider">/</div>
-                    <div class="length"></div>
+                    <!--<div class="divider">/</div>-->
+                    <!--<div class="length"></div>-->
                   </div>
-                  <div class="name">Music Song</div>
-                  <!--     credit for icon to https://saeedalipoor.github.io/icono/ -->
+
+                  <div class="timeline">
+                    <div class="progress"></div>
+                  </div>
+
+
+                  <!--<div class="timeline">-->
+                    <!--<div class="progress"></div>-->
+                  <!--</div>-->
+
                   <div class="volume-container">
                     <div class="volume-button">
                       <div class="volume icono-volumeMedium"></div>
@@ -242,21 +267,6 @@
   <section class="prayer-details">
     <div class="container">
 
-
-
-      <div class="menu-filter" id="myBtnContainer">
-        <!--<button class="btn-filter active-filter" data-value="" onclick="filterSelection('all')">All</button>-->
-        <!--<button class="btn-filter" data-value=".js-requests" onclick="filterSelection('js-requests')">Prayer Requests</button>-->
-        <!--<button class="btn-filter" data-value=".js-answered" onclick="filterSelection('js-answered')">Answered Prayers</button>-->
-      </div>
-
-      <ul class="list-prayers grid-wrap slider">
-
-
-      </ul>
-
-
-
         <ul class="swiper-container swiper-filter">
           <li><a data-filter="" class="swiper-active">All</a></li>
           <li><a data-filter=".filter1">Prayer Requests</a></li>
@@ -265,20 +275,16 @@
 
         <div class="swiper-container swiper-prayers">
           <div class="swiper-wrapper">
+
             <div class="swiper-slide filter1">
-              <li class="item-filter">
                 <div class="prayer">
                   <div class="content-prayer">
                     <div class="text-center">
                       <img src="img/icons/01.svg" alt="">
                     </div>
-
                     <h3 class="h3-underline name-prayer">Anna – Mississauga, Ontario</h3>
-
                     <p>Thank you Michael Ellison for being a man of prayer and sharing it with us, your customers.</p>
-
                     <p class="date">May 17, 2021</p>
-
                     <button class="btn-color" onclick="return countPrayer(this)" data-count="0">Pray</button>
                   </div>
 
@@ -287,26 +293,20 @@
                     <p class="number-prayers"><span>9</span> Prayers</p>
                     <a href="#" class="btn-flag" onclick="return flagPrayer(this)"></a>
                   </div>
-
                 </div>
-              </li>
             </div>
+
             <div class="swiper-slide filter2">
-              <li class="item-filter">
                 <div class="prayer">
                   <div class="content-prayer">
                     <div class="text-center">
                       <img src="img/icons/02.svg" alt="">
                     </div>
-
                     <h3 class="h3-underline name-prayer">Brian – Kansas City, Missouri</h3>
-
                     <p>Praying for my son that he gets treatment for his
                       mental health issues and finds a job and a place to
                       live</p>
-
                     <p class="date">March 08, 2021</p>
-
                     <button class="btn-color" data-count="0">Rejoice</button>
                   </div>
 
@@ -315,24 +315,19 @@
                     <p class="number-prayers"><span>7</span> Rejoicing</p>
                     <a href="#" class="btn-flag"></a>
                   </div>
-
                 </div>
-              </li>
             </div>
-            <div class="swiper-slide filter1">
-              <li class="item-filter">
+            <div class="swiper-slide filter2">
               <div class="prayer">
                 <div class="content-prayer">
                   <div class="text-center">
-                    <img src="img/icons/01.svg" alt="">
+                    <img src="img/icons/02.svg" alt="">
                   </div>
-
-                  <h3 class="h3-underline name-prayer">Anna – Mississauga, Ontario</h3>
-
-                  <p>Thank you Michael Ellison for being a man of prayer and sharing it with us, your customers.</p>
-
-                  <p class="date">May 17, 2021</p>
-
+                  <h3 class="h3-underline name-prayer">Fred – Phoenix, Arizona</h3>
+                  <p>Praying for my son that he gets treatment for his
+                    mental health issues and finds a job and a place to
+                    live</p>
+                  <p class="date">March 08, 2021</p>
                   <button class="btn-color" onclick="return countPrayer(this)" data-count="0">Pray</button>
                 </div>
 
@@ -341,26 +336,19 @@
                   <p class="number-prayers"><span>9</span> Prayers</p>
                   <a href="#" class="btn-flag" onclick="return flagPrayer(this)"></a>
                 </div>
-
               </div>
-            </li>
             </div>
             <div class="swiper-slide filter1">
-              <li class="item-filter">
                 <div class="prayer">
                   <div class="content-prayer">
                     <div class="text-center">
-                      <img src="img/icons/02.svg" alt="">
+                      <img src="img/icons/01.svg" alt="">
                     </div>
-
-                    <h3 class="h3-underline name-prayer">Brian – Kansas City, Missouri</h3>
-
+                    <h3 class="h3-underline name-prayer">Betty – Seattle, Washington</h3>
                     <p>Praying for my son that he gets treatment for his
                       mental health issues and finds a job and a place to
                       live</p>
-
                     <p class="date">March 08, 2021</p>
-
                     <button class="btn-color" data-count="0">Rejoice</button>
                   </div>
 
@@ -369,32 +357,20 @@
                     <p class="number-prayers"><span>7</span> Rejoicing</p>
                     <a href="#" class="btn-flag"></a>
                   </div>
-
                 </div>
-              </li>
             </div>
           </div>
           <div class="swiper-pagination"></div>
 
-          <!-- If we need navigation buttons -->
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
-
-          <!-- If we need scrollbar -->
-          <!--<div class="swiper-scrollbar"></div>-->
-
         </div>
-
-
-
 
       <div class="text-center">
         <button class="btn-transparent" data-count="0">View More</button>
       </div>
-
     </div>
   </section>
-
 
   <section class="requests-section-secondary">
     <div class="container">
@@ -415,13 +391,6 @@
   </section>
 
   <button class="btn-up"></button>
-
-  <span class="icon-left-arrow-angle-big-gross-symbol"></span>
-  <span class="icon-right-arrow"></span>
-
-  <span class="icon-down-arrow"></span>
-  <span class="icon-navigate-up-arrow"></span>
-
 </main>
 	<footer class="footer">
 	<div class="container">
@@ -431,6 +400,8 @@
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 <script  src="js/player.js"></script>
+
+<!--<script  src="js/player-v2.js"></script>-->
 
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
