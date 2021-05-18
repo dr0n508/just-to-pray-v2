@@ -70,11 +70,11 @@ audioPlayer.querySelector(".volume-button").addEventListener("click", () => {
   const volumeEl = audioPlayer.querySelector(".volume-container .volume");
   audio.muted = !audio.muted;
   if (audio.muted) {
-    volumeEl.classList.remove("icono-volumeMedium");
-    volumeEl.classList.add("icono-volumeMute");
+    volumeEl.classList.remove("icon-audio");
+    volumeEl.classList.add("icon-mute");
   } else {
-    volumeEl.classList.add("icono-volumeMedium");
-    volumeEl.classList.remove("icono-volumeMute");
+    volumeEl.classList.add("icon-audio");
+    volumeEl.classList.remove("icon-mute");
   }
 });
 
