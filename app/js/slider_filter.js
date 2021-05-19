@@ -22,7 +22,7 @@ $(document).ready(function(){
 
     // breakpoint where swiper will be destroyed
     // and switches to a dual-column layout
-    const breakpoint = window.matchMedia( '(min-width:31.25em)' );
+    const breakpoint = window.matchMedia( '(min-width:768px)' );
 
     // keep track of swiper instances to destroy later
     let prayersSwiper;
@@ -74,9 +74,6 @@ $(document).ready(function(){
 
     // kickstart
     breakpointChecker();
-
-
-
 
 
 });

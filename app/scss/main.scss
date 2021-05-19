@@ -104,7 +104,6 @@ button, .btn {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	//border-radius: 5px;
 	font-weight: bold;
 	@extend.animate;
 	&:hover {
@@ -129,49 +128,6 @@ button, .btn {
 }
 .hidden {
 	display: none !important;
-}
-
-//////
-
-
-.custom-select {
-  border: solid 2px #E5E5E5;
-  border-radius: 4px;
-  position: relative;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  &:after {
-    position: absolute;
-    content: "\e910";
-    font-family: icomoon;
-    font-size: 16px;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  select {
-    background: none;
-    width: 100%;
-    padding: 18px;
-    border: none;
-    font-size: 16px;
-    font-weight: 500;
-    font-family: $default;
-    -webkit-appearance: none;
-  }
-  select:invalid:not(:focus) {
-    color: #C4C4C4;
-  }
-  select:invalid:focus {
-    color: transparent;
-  }
-  select:focus option {
-    color: $text;
-  }
-  select::-ms-expand {
-    display: none;
-  }
 }
 
 .text-center {
@@ -226,7 +182,6 @@ p {
   }
 }
 
-
 .container {
 	width: 100%;
 	max-width: 1440px;
@@ -238,9 +193,8 @@ p {
 h2.h2 {
   margin-bottom: 50px;
   color: $text;
-
   font-size: 20px;
-  line-height: 20px;
+  line-height: 1.3;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -251,25 +205,18 @@ h2.h2 {
 
 
 
-////
-
+//////////////////intro-section//////////////////
+/////////////////////////////////////////////////
 .intro-section {
   position: relative;
   background: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)), url("../img/home-bg.jpg") no-repeat 50% 50%;
   background-size: cover;
-  @media (max-width: 991px) {
-    background: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)), url("../img/home-bg.jpg") no-repeat 65% 50%;
-    background-size: cover;
-  }
   article.text-content {
     max-width: 600px;
     margin-right: auto;
     margin-left: auto;
-    p {
-      margin-bottom: 0;
-    }
+    p {margin-bottom: 0;}
   }
-
  .h1 {
    color: white;
    text-align: center;
@@ -278,8 +225,14 @@ h2.h2 {
     color: white;
     text-align: center;
   }
+  @media (max-width: 991px) {
+    background: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)), url("../img/home-bg.jpg") no-repeat 65% 50%;
+    background-size: cover;
+  }
 }
 
+//////////////////intro-video-block//////////////
+/////////////////////////////////////////////////
 .intro-video-block {
   position: relative;
   bottom: -200px;
@@ -321,8 +274,7 @@ h2.h2 {
     border-left: solid 3px $accent;
   }
   @media (max-width: 768px) {
-    top: 50px;
-    //padding: 45px 40px 30px 45px;
+    bottom: -130px;
     h3 {
       font-size: 34px;
       line-height: 1.1;
@@ -334,7 +286,8 @@ h2.h2 {
 }
 
 
-//
+//////////////////join-section///////////////////
+/////////////////////////////////////////////////
 .join-section {
   padding: 200px 0 100px;
   article.text-content {
@@ -343,19 +296,17 @@ h2.h2 {
     margin-left: auto;
   }
   @media (max-width: 768px) {
-    padding: 30px 0 70px;
+    padding: 100px 0 70px;
   }
 }
 
 
-///////////query-section///////////
+//////////////////query-section//////////////////
+/////////////////////////////////////////////////
 .query-section {
   background-color: #F6F6F6;
   padding: 100px 0;
   margin-bottom: 100px;
-  @media (max-width: 767px) {
-    margin-bottom: 0;
-  }
   .container {
     max-width: 1010px;
   }
@@ -366,9 +317,6 @@ h2.h2 {
     li {
       width: 50%;
       padding: 0 20px;
-      @media (max-width: 767px) {
-        padding: 0;
-      }
       .item-list {
         background-color: white;
         text-align: center;
@@ -380,33 +328,16 @@ h2.h2 {
         }
         .text-block {
           padding: 40px;
-          p {
-            &:last-child {
-              margin-bottom: 0;
-            }
-          }
-        }
-        @media (max-width: 767px) {
-          margin-bottom: 50px;
-          .text-block {
-            padding: 40px 28px 28px 28px;
+          p:last-child {
+            margin-bottom: 0;
           }
         }
       }
       .item-list.post-w-btn:hover {
         background-color: $accent;
-        .btn-color {
-          background-color: $text;
-        }
-        h3.h3-underline, p {
-          color: white;
-        }
-        h3.h3-underline:after {
-          background: $text;
-        }
-      }
-      @media (max-width: 767px) {
-        width: 100%;
+        .btn-color { background-color: $text; }
+        h3.h3-underline, p { color: white; }
+        h3.h3-underline:after { background: $text; }
       }
     }
     li:first-child .item-list {
@@ -426,16 +357,27 @@ h2.h2 {
       margin-top: 0;
       margin-bottom: 20px;
     }
-    @media (max-width: 767px) {
-      li .item-list {
-        margin-top: 20px !important;
-        margin-bottom: 20px !important;
+  }
+  @media (max-width: 767px) {
+    margin-bottom: 0;
+    ul {
+      li {
+        padding: 0;
+        width: 100%;
+        .item-list {
+          margin-top: 20px !important;
+          margin-bottom: 20px !important;
+          .text-block {
+            padding: 40px 28px 28px 28px;
+          }
+        }
       }
     }
   }
 }
 
-///////////prayers-copy///////////
+//////////////////prayers-copy///////////////////
+/////////////////////////////////////////////////
 .prayers-copy {
   position: relative;
   max-width: 1200px;
@@ -443,7 +385,7 @@ h2.h2 {
   margin-left: auto;
   margin-bottom: -200px;
   padding: 90px 0;
-  background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),url("../img/prayers-copy-bg.jpg") no-repeat 50% 50%;
+  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),url("../img/prayers-copy-bg.jpg") no-repeat 50% 50%;
   background-size: cover;
   .container {
     max-width: 800px;
@@ -465,26 +407,15 @@ h2.h2 {
       margin-bottom: 0;
     }
   }
-
 }
 
-///////////prayer-details///////////
+/////////////////prayer-details/////////////////
+/////////////////////////////////////////////////
 .prayer-details {
   background-color: #F6F6F6;
   padding: 300px 0 100px;
-  .container {
-    max-width: 1010px;
-  }
-
-  .swiper-prayers {
-    margin-bottom: 100px;
-  }
-
-  .swiper-slide {
-
-  }
-
-
+  .container { max-width: 1010px; }
+  .swiper-prayers { margin-bottom: 100px;}
   .prayer {
     background-color: white;
     .btn-color {
@@ -500,12 +431,6 @@ h2.h2 {
         align-items: center;
         justify-content: center;
       }
-      //img {
-      //
-      //}
-      @media (max-width: 767px) {
-        padding: 20px 30px;
-      }
     }
     .footer-prayer {
       display: flex;
@@ -515,15 +440,25 @@ h2.h2 {
         width: 33px;
         height: 33px;
       }
-      .number-prayers {
-        margin-bottom: 0;
-      }
+      .number-prayers { margin-bottom: 0; }
+    }
+  }
+  @media (max-width: 768px) {
+    .view-more-btn {
+      display: none;
+    }
+    .swiper-prayers {
+      margin-bottom: 0;
+    }
+    .prayer .content-prayer {
+      padding: 20px 30px;
     }
   }
 }
 
-///////////requests-section-secondary///////////
-.requests-section-secondary {
+///////////requests-section-secondary////////////
+/////////////////////////////////////////////////
+.music-for-meditation {
   padding: 100px 0 125px;
   .container {
     max-width: 1010px;
@@ -560,19 +495,11 @@ h2.h2 {
       right: auto;
       transform: translateY(-70px);
     }
-
   }
   @media (max-width: 768px) {
     padding: 100px 0 0px;
   }
 }
-
-
-
-
-
-
-
 
 
 @import "media"; /* Always at the end*/

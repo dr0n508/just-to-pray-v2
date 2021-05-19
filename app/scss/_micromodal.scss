@@ -29,8 +29,8 @@
 
 .modal__title {
   margin-top: 0;
-  margin-bottom: 40px;
-  padding-bottom: 20px;
+  margin-bottom: 35px;
+  padding-bottom: 15px;
   box-sizing: border-box;
   width: 100%;
   font-weight: 600;
@@ -41,7 +41,6 @@
   text-transform: uppercase;
   border-bottom: solid 3px $accent;
 }
-
 
 .modal__close {
     position: absolute;
@@ -79,18 +78,6 @@
         font-size: 14px;
     }
 }
-.modal__content .pdf-link {
-    display: inline-block;
-    position: relative;
-    font-size: 14px;
-    outline: none;
-    line-height: 20px;
-}
-
-.modal__content .pdf-link:before {
-    font-size: 20px;
-    line-height: 20px;
-}
 
 @keyframes mmfadeIn {
     from { opacity: 0; }
@@ -114,7 +101,6 @@
 
 .micromodal-slide {
   display: none;
-
 }
 
 .micromodal-slide.is-open {

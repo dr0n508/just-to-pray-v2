@@ -17,13 +17,9 @@
       letter-spacing: 3px;
       text-transform: uppercase;
       border-bottom: solid 3px transparent;
-      &:hover {
-        border-bottom: solid 3px $accent;
-      }
+      &:hover { border-bottom: solid 3px $accent; }
     }
-    a.swiper-active {
-      border-bottom: solid 3px $accent;
-    }
+    a.swiper-active { border-bottom: solid 3px $accent; }
   }
   @media (max-width: 767px) {
     flex-direction: column;
@@ -37,13 +33,13 @@
   }
 }
 
-@media (max-width: 31.25em) {
+@media (max-width: 767px) {
   .swiper-wrapper {
     padding-bottom: 70px;
   }
 }
 
-@media (min-width: 31.25em) {
+@media (min-width: 768px) {
   .swiper-wrapper {
     flex-wrap: wrap;
     width: 100%;
@@ -58,7 +54,6 @@
   bottom: 0!important;
   top: auto !important;
 }
-
 
 .swiper-button-prev:after {
   content: "\e909";
@@ -82,21 +77,17 @@
 }
 
 .swiper-slide {
-  /* a single column layout */
   width: 100%;
 }
 
-@media (min-width: 31.25em) {
+@media (min-width: 768px) {
   .swiper-slide  {
-    /* swiper is disabled at this breakpoint */
-    /* going for a 2 column layout here */
     width: 50%;
   }
 }
 
-@media (min-width: 43.75em) {
+@media (min-width: 768px) {
   .swiper-slide  {
-    /* upping it to a 3 column layout */
     width: 50%;
   }
 }
@@ -104,22 +95,15 @@
 @media (min-width: 53em) {
   .swiper-slide  {
     padding: 25px;
-    //display: flex;
-    //align-self: stretch;
-    //justify-content: stretch;
-    //justify-items: stretch;
-
   }
 }
 
 .swiper-pagination {
-  /* show on small viewports */
   display: block;
 }
 
-@media (min-width: 31.25em) {
+@media (min-width: 768px) {
   .swiper-pagination {
-    /* swiper is disabled at this breakpoint */
     display: none;
   }
   .swiper-button-prev, .swiper-button-next {

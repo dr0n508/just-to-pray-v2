@@ -20,7 +20,6 @@ MicroModal.init('modal-3');
 		e.stopPropagation();
 	});
 
-
 // Mobile submenu
 	$('.nav_item.has_child').on('click', function(){
 		if ($(window).width() <= 767) {

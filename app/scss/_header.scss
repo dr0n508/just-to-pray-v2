@@ -66,7 +66,7 @@
   }
 }
 
-.user_menu {
+.social_menu {
   display: flex;
   align-items: center;
   a {
@@ -78,7 +78,7 @@
     &:last-child  {
       padding-right: 0;
     }
-    &:hover span { color: $text; }
+    &:hover span { color: $accent; }
   }
 }
 
@@ -205,7 +205,7 @@
     width: 100%;
     border-bottom: 1px solid #e2e2e2;
   }
-  .user_menu {
+  .social_menu {
     flex-direction: column;
   }
 }
