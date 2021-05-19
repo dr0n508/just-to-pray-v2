@@ -4,6 +4,23 @@
 // - Be able to grab a custom title instead of "Music Song"
 // - Hover over sliders to see preview of timestamp/volume change
 
+
+function setAudioFile(mp3) {
+
+    audio.src = mp3.value;
+
+    if (audio.paused) {
+        playBtn.classList.remove("play");
+        playBtn.classList.add("pause");
+        audio.play();
+    } else {
+        playBtn.classList.remove("pause");
+        playBtn.classList.add("play");
+        audio.pause();
+    }
+
+}
+
 const audioPlayer = document.querySelector(".audio-player");
 const audio = new Audio(
   "audio/Prayer_Grieving.mp3"
