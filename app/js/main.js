@@ -56,7 +56,7 @@ if (document.querySelector('.play-box') && document.getElementById('video-player
 const btnUp = $('#btn-up');
 
 $(window).scroll(function() {
-    if ($(window).scrollTop() > 700) {
+    if ($(window).scrollTop() > 1500) {
         btnUp.addClass('show');
     } else {
         btnUp.removeClass('show');

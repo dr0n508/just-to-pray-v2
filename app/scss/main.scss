@@ -212,7 +212,7 @@ h2.h2 {
 /////////////////////////////////////////////////
 .intro-section {
   position: relative;
-  background: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)), url("../img/home-bg.jpg") no-repeat 50% 50%;
+  background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url("../img/home-bg.jpg") no-repeat 50% 50%;
   background-size: cover;
   article.text-content {
     max-width: 600px;
@@ -229,7 +229,7 @@ h2.h2 {
     text-align: center;
   }
   @media (max-width: 991px) {
-    background: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)), url("../img/home-bg.jpg") no-repeat 65% 50%;
+    background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url("../img/home-bg.jpg") no-repeat 65% 50%;
     background-size: cover;
   }
 }
