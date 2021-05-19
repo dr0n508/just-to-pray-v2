@@ -373,7 +373,8 @@
     .nav_item .icon {
       font-size: 12px; }
     .nav_item a {
-      padding-bottom: 5px; }
+      padding-bottom: 5px;
+      border-bottom: solid 3px transparent; }
   .nav_item.active a {
     border-bottom: solid 3px #A9C370; }
   .nav .line {
@@ -594,6 +595,7 @@
   margin-bottom: 20px;
   padding: 12px 30px;
   background-color: transparent;
+  border: solid 1px #13294A;
   color: #13294A;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
@@ -603,6 +605,13 @@
   text-transform: uppercase; }
   .btn-transparent:hover {
     color: white; }
+
+.btn-transparent.white {
+  color: white;
+  border-color: white; }
+  .btn-transparent.white:hover {
+    background-color: #A9C370;
+    border-color: #A9C370; }
 
 .btn-play {
   display: inline-block;
@@ -1173,12 +1182,10 @@ p {
   .h3-underline.inverted:after {
     background-color: #13294A; }
 
-.container {
-  width: 100%;
-  max-width: 1440px;
-  margin: auto;
-  padding-left: 15px;
-  padding-right: 15px; }
+blockquote p {
+  font-family: "American Classic", serif;
+  font-style: italic;
+  margin-bottom: 0; }
 
 h2.h2 {
   margin-bottom: 50px;
@@ -1188,6 +1195,13 @@ h2.h2 {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 3px; }
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px; }
 
 .intro-section {
   position: relative;
@@ -1217,6 +1231,27 @@ h2.h2 {
       background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../img/home-bg.jpg") no-repeat 65% 50%;
       -webkit-background-size: cover;
               background-size: cover; } }
+
+.intro-section.about-us-page {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url("../img/about-us-bg.jpg") no-repeat 50% 50%;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../img/about-us-bg.jpg") no-repeat 50% 50%;
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../img/about-us-bg.jpg") no-repeat 50% 50%;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../img/about-us-bg.jpg") no-repeat 50% 50%;
+  -webkit-background-size: cover;
+          background-size: cover; }
+
+.intro-section.about-us-page {
+  height: 100%; }
+  .intro-section.about-us-page article {
+    margin-bottom: 50px;
+    max-width: 800px; }
+  .intro-section.about-us-page .btn-transparent.white {
+    margin-bottom: 50px; }
+  .intro-section.about-us-page blockquote {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 50px;
+    max-width: 630px; }
 
 .intro-video-block {
   position: relative;
@@ -1379,10 +1414,6 @@ h2.h2 {
   .prayers-copy p {
     color: white;
     text-align: center; }
-  .prayers-copy blockquote p {
-    font-family: "American Classic", serif;
-    font-style: italic;
-    margin-bottom: 0; }
 
 .prayer-details {
   background-color: #F6F6F6;

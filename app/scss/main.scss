@@ -182,12 +182,12 @@ p {
   }
 }
 
-.container {
-	width: 100%;
-	max-width: 1440px;
-	margin: auto;
-	padding-left: 15px;
-	padding-right: 15px;
+blockquote {
+  p {
+    font-family: $american;
+    font-style: italic;
+    margin-bottom: 0;
+  }
 }
 
 h2.h2 {
@@ -200,10 +200,13 @@ h2.h2 {
   letter-spacing: 3px;
 }
 
-
-
-
-
+.container {
+	width: 100%;
+	max-width: 1440px;
+	margin: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
 
 //////////////////intro-section//////////////////
 /////////////////////////////////////////////////
@@ -228,6 +231,27 @@ h2.h2 {
   @media (max-width: 991px) {
     background: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)), url("../img/home-bg.jpg") no-repeat 65% 50%;
     background-size: cover;
+  }
+}
+.intro-section.about-us-page {
+  background: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)), url("../img/about-us-bg.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.intro-section.about-us-page {
+  height: 100%;
+  article {
+    margin-bottom: 50px;
+    max-width: 800px;
+  }
+  .btn-transparent.white {
+    margin-bottom: 50px;
+  }
+  blockquote {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 50px;
+    max-width: 630px;
   }
 }
 
@@ -399,13 +423,6 @@ h2.h2 {
   p {
     color: white;
     text-align: center;
-  }
-  blockquote {
-    p {
-      font-family: $american;
-      font-style: italic;
-      margin-bottom: 0;
-    }
   }
 }
 

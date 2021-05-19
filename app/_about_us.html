@@ -1,0 +1,46 @@
+<main class="main">
+  <section class="intro-section about-us-page">
+
+
+    @@include('_header.html')
+
+    <div class="container">
+
+      <article class="text-content">
+        <h1 class="h1">About Us</h1>
+        <p>Just Pray It™ was created to help unlock the power of prayer for every need. At this website you have access to free resources to help you find God’s provision for every need.  By joining as a Prayer Member we pray for you, we pray with you and you can even pray for others in need. And when you join, you will be joining with like-minded believers praying in agreement with God’s love.  You will also find a variety of recorded prayers, videos and music with words of love, care, hope and inspiration.  We will also send you information on urgent needs throughout the world and notices of upcoming special prayer events. Just Pray It is your online resource to pray and reflect on God’s goodness and blessing in your life.</p>
+      </article>
+
+      <div class="wrapper-btn text-center">
+        <a href="javascript:void(0)" data-micromodal-trigger="modal-3" class="btn-transparent white">click here to join</a>
+      </div>
+
+      <blockquote>
+        <p>Jeremiah 33:3 Call unto me and I will answer you and show you great and mighty things!</p>
+      </blockquote>
+    </div>
+  </section>
+</main>
+
+<!--form-modal-->
+<div class="modal micromodal-slide" id="modal-3" aria-hidden="true">
+  <div class="modal__overlay" tabindex="-1" data-micromodal-close="">
+    <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-3-title">
+      <header class="modal__header">
+        <h2 class="modal__title text-center" id="modal-3-title">Join As A Prayer Member</h2>
+        <button class="modal__close" aria-label="Close modal" data-micromodal-close=""></button>
+      </header>
+      <div class="modal__content" id="modal-3-content">
+        <form action="http://www.justprayit.com/wp-admin/admin-ajax.php" method="POST" autocomplete="OFF" onsubmit="return submitForm(this)" novalidate="" class="form-modal">
+          <input class="input-text" type="text" name="first_name" placeholder="First Name" autocomplete="OFF" required="">
+          <input class="input-text" type="text" name="city" placeholder="City" autocomplete="OFF" required="">
+          <input class="input-text" type="text" name="state" placeholder="State/Province" autocomplete="OFF" required="">
+          <input class="input-text" type="email" name="email" placeholder="Email Address" autocomplete="OFF" required="">
+          <input class="input-text" id="subscribe-1" name="subscribe" type="hidden" value="1" onchange="this.parentNode.children[3].required = this.checked ? true :  false">
+          <input type="hidden" name="action" value="process_entry">
+          <button class="btn-color" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -33,6 +33,7 @@
   margin-bottom: 20px;
   padding: 12px 30px;
   background-color: transparent;
+  border: solid 1px $text;
   color: $text;
   font-family: $default;
   font-size: 16px;
@@ -42,6 +43,15 @@
   text-transform: uppercase;
   &:hover {
     color: white;
+  }
+}
+
+.btn-transparent.white {
+  color: white;
+  border-color: white;
+  &:hover {
+    background-color: $accent;
+    border-color: $accent;
   }
 }
 

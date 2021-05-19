@@ -23,6 +23,7 @@ audio.addEventListener(
 );
 
 //click on timeline to skip around
+
 const timeline = audioPlayer.querySelector(".timeline");
 timeline.addEventListener("click", e => {
   const timelineWidth = window.getComputedStyle(timeline).width;
