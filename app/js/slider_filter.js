@@ -23,7 +23,7 @@ $(document).ready(function(){
     var mySwiper = undefined;
     function initSwiper() {
         var screenWidth = $(window).width();
-        if(screenWidth < 992 && mySwiper == undefined) {
+        if(screenWidth < 767 && mySwiper == undefined) {
             mySwiper = new Swiper('.swiper-prayers', {
                 observer: true,
                         slidesPerView: 1,

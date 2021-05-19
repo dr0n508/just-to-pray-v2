@@ -55,13 +55,18 @@ if (document.querySelector('.play-box') && document.getElementById('video-player
 ////scroll to top button
 const btnUp = $('#btn-up');
 
-$(window).scroll(function() {
-    if ($(window).scrollTop() > 1500) {
-        btnUp.addClass('show');
-    } else {
-        btnUp.removeClass('show');
-    }
-});
+
+if ($(window).width() >= 768) {
+
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 1500) {
+            btnUp.addClass('show');
+        } else {
+            btnUp.removeClass('show');
+        }
+    });
+
+}
 
 btnUp.on('click', function(e) {
     e.preventDefault();
