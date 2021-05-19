@@ -2,6 +2,9 @@
 .footer {
   background: $text;
   padding: 25px 0;
+  .container {
+    position: relative;
+  }
   p {
     color: #fff;
     margin-bottom: 0;

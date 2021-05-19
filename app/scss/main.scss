@@ -1,4 +1,7 @@
 @import "vars";
+@import "micromodal";
+@import "inputs";
+@import "modal-forms";
 @import "fonts";
 @import "header";
 @import "video";
@@ -133,9 +136,8 @@ button, .btn {
 
 .custom-select {
   border: solid 2px #E5E5E5;
-  border-radius: 3px;
+  border-radius: 4px;
   position: relative;
-  margin-bottom: 50px;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
@@ -154,9 +156,18 @@ button, .btn {
     padding: 18px;
     border: none;
     font-size: 16px;
+    font-weight: 500;
     font-family: $default;
-    color: #C4C4C4;
     -webkit-appearance: none;
+  }
+  select:invalid:not(:focus) {
+    color: #C4C4C4;
+  }
+  select:invalid:focus {
+    color: transparent;
+  }
+  select:focus option {
+    color: $text;
   }
   select::-ms-expand {
     display: none;
@@ -340,6 +351,7 @@ h2.h2 {
   ul {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     li {
       width: 50%;
       padding: 0 20px;
@@ -347,7 +359,6 @@ h2.h2 {
         padding: 0;
       }
       .item-list {
-        margin-bottom: 100px;
         background-color: white;
         text-align: center;
         .image-wrapper {
@@ -367,7 +378,7 @@ h2.h2 {
         @media (max-width: 767px) {
           margin-bottom: 50px;
           .text-block {
-            padding: 40px 20px 20px 20px;
+            padding: 40px 28px 28px 28px;
           }
         }
       }
@@ -385,6 +396,29 @@ h2.h2 {
       }
       @media (max-width: 767px) {
         width: 100%;
+      }
+    }
+    li:first-child .item-list {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    li:nth-child(2) .item-list {
+      margin-top: 80px;
+      margin-bottom: 80px;
+
+    }
+    li:nth-child(3) .item-list {
+      margin-top: 60px;
+      margin-bottom: 20px;
+    }
+    li:nth-child(4) .item-list {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 767px) {
+      li .item-list {
+        margin-top: 20px !important;
+        margin-bottom: 20px !important;
       }
     }
   }
@@ -444,12 +478,20 @@ h2.h2 {
     background-color: white;
     .btn-color {
       width: 100%;
+      margin-bottom: 0;
     }
     .content-prayer {
-      padding: 30px 68px;
-      img {
+      padding: 30px 68px 0 68px;
+      .img-wrapper {
+        min-height: 85px;
         margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
+      //img {
+      //
+      //}
       @media (max-width: 767px) {
         padding: 20px 30px;
       }
@@ -471,7 +513,7 @@ h2.h2 {
 
 ///////////requests-section-secondary///////////
 .requests-section-secondary {
-  padding: 100px 0;
+  padding: 100px 0 125px;
   .container {
     max-width: 1010px;
     position: relative;
@@ -509,6 +551,9 @@ h2.h2 {
     }
 
   }
+  @media (max-width: 768px) {
+    padding: 100px 0 0px;
+  }
 }
 
 
@@ -536,6 +581,5 @@ h2.h2 {
 @media (min-width: 992px) {
   .show-mobile { display: none; }
 }
-
 
 

@@ -1,4 +1,4 @@
-<main class="main">
+<main class="main" id="top-page">
   <section class="intro-section">
 
     @@include('_header.html')
@@ -15,10 +15,20 @@
       <section class="intro-video-block">
         <div class="row">
           <h3>Invitation <br> Video</h3>
-          <a href="#" class="btn-play"></a>
+          <a href="#" class="btn-play" id="playbtn"></a>
         </div>
         <span class="text-accent">Just Pray It</span>
       </section>
+
+
+
+
+          <iframe id="video-player" class="video" width="560" height="315" src="https://player.vimeo.com/video/405971419" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay"></iframe>
+
+
+      <!--<div class="videoWrapper">-->
+        <!--<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/405971419" allowfullscreen="" frameborder="0" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div>-->
+      <!--</div>-->
 
     </div>
   </section>
@@ -32,7 +42,7 @@
           provisions. You will also receive information on urgent needs throughout the world and upcoming special prayer events.</p>
       </article>
 
-      <a href="#" class="btn-color">Join As Prayer Member</a>
+      <a href="javascript:void(0)" data-micromodal-trigger="modal-3" class="btn-color">Join As Prayer Member</a>
     </div>
   </section>
 
@@ -43,9 +53,9 @@
         <li>
           <div class="item-list post-video">
             <div class="video">
-              <div class="videoWrapper">
-                <iframe src="https://vimeo.com/showcase/7005463/embed" allowfullscreen="" frameborder="0" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-              </div>
+              <!--<div class="videoWrapper">-->
+                <!--<iframe src="https://vimeo.com/showcase/7005463/embed" allowfullscreen="" frameborder="0" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>-->
+              <!--</div>-->
             </div>
             <div class="text-block">
               <h3 class="h3-underline centered">Watch the Latest Prayer Video</h3>
@@ -66,8 +76,8 @@
                 variety of prayers for hope, healing and inspiration.</p>
 
               <div class="custom-select">
-                <select onchange="setAudioFile(this)">
-                  <option value="">Select a prayer</option>
+                <select required onchange="setAudioFile(this)">
+                  <option value="" hidden disabled selected>Select a prayer</option>
                   <option value="http://www.justprayit.com/wp-content/uploads/Victory.mp3">Victory</option>
                   <option value="http://www.justprayit.com/wp-content/uploads/Prayer_Heal-Our-Land.mp3">Heal Our Land</option>
                   <option value="http://www.justprayit.com/wp-content/uploads/Prayer_testpositive.mp3">Corona Virus</option>
@@ -153,7 +163,7 @@
                 No prayer will go unnoticed or un-prayed for. Each prayer
                 request is individually printed out and prayed for. Please take
                 a moment to submit your prayer request.</p>
-              <a href="#" class="btn-color">Submit Your Prayer Request</a>
+              <a href="javascript:void(0)" data-micromodal-trigger="modal-2" class="btn-color">Submit Your <span class="cut-mobile">Prayer</span> Request</a>
             </div>
           </div>
         </li>
@@ -169,7 +179,7 @@
                 others so they can also believe for their prayers to be
                 answered. Psalm 66:19 “But truly God has listened; he has
                 attended to the voice of my prayer.”</p>
-              <a href="#" class="btn-color">Share Your Answered Prayer</a>
+              <a href="#" class="btn-color">Share Your <span class="cut-mobile">Answered</span> Prayer</a>
             </div>
           </div>
         </li>
@@ -210,7 +220,7 @@
             <div class="swiper-slide filter1">
                 <div class="prayer">
                   <div class="content-prayer">
-                    <div class="text-center">
+                    <div class="img-wrapper text-center">
                       <img src="img/icons/01.svg" alt="">
                     </div>
                     <h3 class="h3-underline name-prayer">Anna – Mississauga, Ontario</h3>
@@ -230,7 +240,7 @@
             <div class="swiper-slide filter2">
                 <div class="prayer">
                   <div class="content-prayer">
-                    <div class="text-center">
+                    <div class="img-wrapper text-center">
                       <img src="img/icons/02.svg" alt="">
                     </div>
                     <h3 class="h3-underline name-prayer">Brian – Kansas City, Missouri</h3>
@@ -251,7 +261,7 @@
             <div class="swiper-slide filter2">
               <div class="prayer">
                 <div class="content-prayer">
-                  <div class="text-center">
+                  <div class="img-wrapper text-center">
                     <img src="img/icons/02.svg" alt="">
                   </div>
                   <h3 class="h3-underline name-prayer">Fred – Phoenix, Arizona</h3>
@@ -272,7 +282,7 @@
             <div class="swiper-slide filter1">
                 <div class="prayer">
                   <div class="content-prayer">
-                    <div class="text-center">
+                    <div class="img-wrapper text-center">
                       <img src="img/icons/01.svg" alt="">
                     </div>
                     <h3 class="h3-underline name-prayer">Betty – Seattle, Washington</h3>
@@ -313,13 +323,103 @@
       </div>
       <div class="video-block">
         <div class="video">
-          <div class="videoWrapper">
-            <div><iframe src="https://vimeo.com/showcase/7477397/embed" allowfullscreen="" frameborder="0" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div>
-          </div>
+          <!--<div class="videoWrapper">-->
+            <!--<div><iframe src="https://vimeo.com/showcase/7477397/embed" allowfullscreen="" frameborder="0" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div>-->
+          <!--</div>-->
         </div>
       </div>
     </div>
   </section>
-
-  <button class="btn-up"></button>
 </main>
+
+
+<!--form-modal-->
+<div class="modal micromodal-slide" id="modal-3" aria-hidden="true">
+  <div class="modal__overlay" tabindex="-1" data-micromodal-close="">
+    <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-3-title">
+      <header class="modal__header">
+        <h2 class="modal__title text-center" id="modal-3-title">Join As A Prayer Member</h2>
+        <button class="modal__close" aria-label="Close modal" data-micromodal-close=""></button>
+      </header>
+      <div class="modal__content" id="modal-3-content">
+        <form action="http://www.justprayit.com/wp-admin/admin-ajax.php" method="POST" autocomplete="OFF" onsubmit="return submitForm(this)" novalidate="" class="form-modal">
+          <input class="input-text" type="text" name="first_name" placeholder="First Name" autocomplete="OFF" required="">
+          <input class="input-text" type="text" name="city" placeholder="City" autocomplete="OFF" required="">
+          <input class="input-text" type="text" name="state" placeholder="State/Province" autocomplete="OFF" required="">
+          <input class="input-text" type="email" name="email" placeholder="Email Address" autocomplete="OFF" required="">
+          <input class="input-text" id="subscribe-1" name="subscribe" type="hidden" value="1" onchange="this.parentNode.children[3].required = this.checked ? true :  false">
+          <input type="hidden" name="action" value="process_entry">
+          <button class="btn-color" type="submit">Submit</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal micromodal-slide" id="modal-2" aria-hidden="true">
+  <div class="modal__overlay" tabindex="-1" data-micromodal-close="">
+    <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-3-title">
+      <header class="modal__header">
+        <h2 class="modal__title text-center" id="modal-2-title">Submit A Prayer Request</h2>
+        <button class="modal__close" aria-label="Close modal" data-micromodal-close=""></button>
+      </header>
+      <div class="modal__content" id="modal-2-content">
+
+        <form id="prayer" action="http://www.justprayit.com/wp-admin/admin-ajax.php" method="POST" autocomplete="OFF" onsubmit="return submitForm(this)" novalidate="" class="form-modal">
+          <input class="input-text" type="text" name="first_name" placeholder="First Name" autocomplete="OFF" required="">
+          <input class="input-text" type="text" name="city" placeholder="City" autocomplete="OFF" required="">
+          <input class="input-text" type="text" name="state" placeholder="State/Province" autocomplete="OFF" required="">
+          <input class="input-text" type="email" name="email" placeholder="Email Address" autocomplete="OFF" required="">
+
+          <p class="small-text">*Per the terms of use, all prayer requests are subject to review. Please do not provide any confidential information, last names, email address or phone numbers in your prayer request.</p>
+
+          <textarea name="request" placeholder="Your Request (500 Characters Max.)" maxlength="500" required=""></textarea>
+
+          <div class="checkbox-wrap">
+            <input class="custom-checkbox" id="make-public" name="make_public" type="checkbox" value="1" checked="">
+            <label for="make-public">Make Public<small>If the Make Public box is checked, other people can see your prayer and pray with you</small></label>
+          </div>
+
+          <div class="checkbox-wrap">
+            <input class="custom-checkbox" id="subscribe-2" name="subscribe" type="checkbox" value="1" checked="">
+            <label for="subscribe-2">Subscribe to email list</label>
+          </div>
+
+          <div class="checkbox-wrap">
+            <input class="custom-checkbox" id="agree-terms" name="terms" type="checkbox" value="1" required="">
+            <label for="agree-terms">I Agree to the <a href="#">Terms of Use</a></label>
+          </div>
+
+          <input type="hidden" name="action" value="process_entry">
+
+          <input type="hidden" name="insert" value="1">
+
+          <button class="btn-color" type="submit">Submit</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--<div id="modal-Id">-->
+  <!--<div id="sss">-->
+    <!--<img id="vimeo-videoId" src="img/post1-image.jpg" onclick="return imgClick();" />-->
+  <!--</div>-->
+<!--</div>-->
+
+
+
+<!--<iframe id="my-player" width="720" height="405" id="my" src="//rutube.ru/play/embed/7163336" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen></iframe>-->
+
+<!--<div class="play" id="play">play</div>-->
+
+
+
+
+
+
+
+

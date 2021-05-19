@@ -5,6 +5,9 @@
   background: #13294A;
   font-family: $default;
   color: white;
+  @media (max-width: 450px) {
+    height: 50px;
+  }
   .timeline {
     flex-grow: 1;
     background: #040f1d;
@@ -34,7 +37,7 @@
         border-radius: 50%;
         display: block;
         background-color: $accent;
-        z-index: 99;
+        z-index: 2;
       }
     }
   }

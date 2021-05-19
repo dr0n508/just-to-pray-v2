@@ -1,0 +1,48 @@
+.form-modal {
+  .input-text {
+    width: 100%;
+    border: solid 2px #E5E5E5;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  ::placeholder {
+    color: #C4C4C4;
+  }
+  .checkbox-wrap {
+    margin-bottom: 10px;
+    display: flex;
+  }
+  .g-recaptcha {
+    margin-bottom: 20px;
+  }
+  .btn-color {
+    margin-top: 20px;
+    min-width: 180px;
+  }
+  .btn-color:last-child {
+    margin-bottom: 0;
+  }
+  .small-text {
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 10px;
+  }
+  textarea {
+    width: 100%;
+    border: solid 2px #E5E5E5;
+    border-radius: 4px;
+  }
+  label {
+    font-size: 14px;
+    font-weight: 500;
+    small {
+      font-weight: 300;
+      display: block;
+      margin-left: 23px;
+    }
+  }
+
+
+}
