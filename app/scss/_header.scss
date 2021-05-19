@@ -73,7 +73,7 @@
   a {
     padding: 0 10px;
     @media (max-width: 991px) {
-      padding: 10px 0;
+      padding: 10px;
     }
     span { color: white;}
     &:last-child  {
@@ -182,12 +182,12 @@
     right: 0;
     z-index: 1;
     flex-direction: column;
-    padding-bottom: 100px;
+    padding-bottom: 20px;
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.3);
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
-    height: 100vh;
+    //height: 100vh;
     overflow: hidden;
     &.active {
       opacity: 1;
@@ -201,12 +201,67 @@
   }
   .nav {
     flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 60px;
     margin-bottom: 30px;
     padding-bottom: 15px;
     width: 100%;
     border-bottom: 1px solid #e2e2e2;
   }
-  .social_menu {
-    flex-direction: column;
+}
+
+////////////////////////////
+.sub_menu {
+  position: absolute;
+  background: $text;
+  top: 100%;
+  left: 0;
+  width: max-content;
+  min-width: 170px;
+  opacity: 0;
+  visibility: hidden;
+  @extend.animate;
+  &_item {
+    a {
+      display: block;
+      padding: 15px;
+      transition: none;
+      font-size: 12px;
+    }
+    @extend.animate;
+    &:hover {
+      background: $accent;
+      color: #fff;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .nav {
+    &_item {
+      &:hover {
+        //background: #f4f4f4;
+        //color: #000;
+        //border-top: 2px solid $accent;
+        .sub_menu {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .sub_menu {
+    opacity: 1;
+    visibility: visible;
+    display: none;
+    position: static;
+    width: 100%;
+    transition: none;
+    border-top: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+    margin-top: 15px;
   }
 }

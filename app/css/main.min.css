@@ -409,7 +409,7 @@
     padding: 0 10px; }
     @media (max-width: 991px) {
       .social_menu a {
-        padding: 10px 0; } }
+        padding: 10px; } }
     .social_menu a span {
       color: white; }
     .social_menu a:last-child {
@@ -512,7 +512,7 @@
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding-bottom: 100px;
+    padding-bottom: 20px;
     -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.3);
             box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.3);
     opacity: 0;
@@ -520,7 +520,6 @@
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    height: 100vh;
     overflow: hidden; }
     .menu_content.active {
       opacity: 1;
@@ -535,16 +534,56 @@
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-top: 60px;
     margin-bottom: 30px;
     padding-bottom: 15px;
     width: 100%;
-    border-bottom: 1px solid #e2e2e2; }
-  .social_menu {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column; } }
+    border-bottom: 1px solid #e2e2e2; } }
+
+.sub_menu {
+  position: absolute;
+  background: #13294A;
+  top: 100%;
+  left: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  min-width: 170px;
+  opacity: 0;
+  visibility: hidden; }
+  .sub_menu_item a {
+    display: block;
+    padding: 15px;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+    font-size: 12px; }
+  .sub_menu_item:hover {
+    background: #A9C370;
+    color: #fff; }
+
+@media (min-width: 992px) {
+  .nav_item:hover .sub_menu {
+    opacity: 1;
+    visibility: visible; } }
+
+@media (max-width: 991px) {
+  .sub_menu {
+    opacity: 1;
+    visibility: visible;
+    display: none;
+    position: static;
+    width: 100%;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+    border-top: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+    margin-top: 15px; } }
 
 .videoWrapper {
   position: relative;
@@ -1136,7 +1175,7 @@ button, .btn {
     background: #13294A;
     color: #ffffff; }
 
-.animate, a, button, .btn {
+.animate, .sub_menu, .sub_menu_item, a, button, .btn {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
