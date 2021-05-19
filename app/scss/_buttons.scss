@@ -107,27 +107,47 @@
   }
 }
 
-.btn-up {
-  position: absolute;
-  right: 0;
-  top: -150px;
-  display: block;
+//btn UP
+#btn-up {
+  display: inline-block;
   width: 70px;
   height: 70px;
   background-color: $accent;
   color: white;
+  text-align: center;
+  position: fixed;
+  bottom: 150px;
+  right: 30px;
+  transition: background-color .3s,
+  opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
   &:after {
-    position: absolute;
     content: "\e911";
+    position: absolute;
     font-family: icomoon;
     font-size: 24px;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
   }
+  &:hover {
+    cursor: pointer;
+    background-color: $text
+  }
+  &:active {
+    background-color: $text
+  }
   @media (max-width: 768px) {
     width: 50px;
     height: 50px;
-    top: -75px;
+    bottom: 78px;
+    right: 0px;
   }
+}
+
+#btn-up.show {
+  opacity: 1;
+  visibility: visible;
 }

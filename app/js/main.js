@@ -32,11 +32,6 @@ MicroModal.init('modal-3');
 		}
 	});
 
-$('#btn-up').click(function() {
-    $('html, body').animate({scrollTop: 0},500);
-    return false;
-});
-
 //intro video
 
 if (document.querySelector('.play-box') && document.getElementById('video-player')) {
@@ -56,6 +51,22 @@ if (document.querySelector('.play-box') && document.getElementById('video-player
     });
 
 }
+
+////scroll to top button
+const btnUp = $('#btn-up');
+
+$(window).scroll(function() {
+    if ($(window).scrollTop() > 700) {
+        btnUp.addClass('show');
+    } else {
+        btnUp.removeClass('show');
+    }
+});
+
+btnUp.on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({scrollTop:0}, '300');
+});
 
 
 
