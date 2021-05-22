@@ -45,7 +45,7 @@
     }
   }
   &_item.active a {
-    border-bottom: solid 3px $accent;
+    border-bottom: solid 1px $accent;
   }
   .line {
     width: 1px;
@@ -147,7 +147,7 @@
   .nav {
     &_item {
       &:hover a {
-        border-bottom: 3px solid $accent;
+        border-bottom: 1px solid $accent;
       }
     }
   }
@@ -215,7 +215,8 @@
 ////////////////////////////
 .sub_menu {
   position: absolute;
-  background: $text;
+  //background: $text;
+  background: #183663;
   top: 100%;
   left: 0;
   width: max-content;
@@ -229,6 +230,7 @@
       padding: 15px;
       transition: none;
       font-size: 12px;
+      letter-spacing: 1px;
     }
     @extend.animate;
     &:hover {
@@ -262,8 +264,9 @@
     position: static;
     width: 100%;
     transition: none;
-    border-top: 1px solid #e2e2e2;
-    border-bottom: 1px solid #e2e2e2;
+    //border-top: 1px solid #e2e2e2;
+    //border-bottom: 1px solid #e2e2e2;
+    border-top: 1px solid $accent;
     margin-top: 15px;
   }
 }
