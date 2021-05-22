@@ -38,6 +38,7 @@
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+  cursor: pointer;
   &:after {
     position: absolute;
     content: "\e910";
@@ -46,8 +47,10 @@
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
+    pointer-events: none;
   }
   select {
+    cursor: pointer;
     background: none;
     width: 100%;
     padding: 18px;
@@ -56,6 +59,7 @@
     font-weight: 300;
     font-family: $default;
     -webkit-appearance: none;
+    z-index: 2;
   }
   select:invalid:not(:focus) {
     color: #C4C4C4;

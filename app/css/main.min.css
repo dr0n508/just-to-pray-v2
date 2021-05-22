@@ -212,7 +212,8 @@
   position: relative;
   width: 90%;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  cursor: pointer; }
   .custom-select:after {
     position: absolute;
     content: "\e910";
@@ -222,8 +223,10 @@
     top: 50%;
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
-            transform: translateY(-50%); }
+            transform: translateY(-50%);
+    pointer-events: none; }
   .custom-select select {
+    cursor: pointer;
     background: none;
     width: 100%;
     padding: 18px;
@@ -231,7 +234,8 @@
     font-size: 16px;
     font-weight: 300;
     font-family: "Montserrat", sans-serif;
-    -webkit-appearance: none; }
+    -webkit-appearance: none;
+    z-index: 2; }
   .custom-select select:invalid:not(:focus) {
     color: #C4C4C4; }
   .custom-select select:invalid:focus {

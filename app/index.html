@@ -22,12 +22,12 @@
 	<meta name="theme-color" content="#3a66c7">
 
 	<!-- Style -->
-  <link rel='stylesheet' href='https://icono-49d6.kxcdn.com/icono.min.css'>
-
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <link rel='stylesheet' href='libs/tooltip.min.css'>
 
 	<link rel="stylesheet" href="css/main.min.css">
 </head>
@@ -47,18 +47,21 @@
 				<div class="menu_content">
 					<ul class="nav">
             <li class="line line-first"></li>
-						<li class="nav_item active">
-              <a href="/">Home</a>
-						</li>
-            <li class="nav_item has_child">
-              Sub_Menu
+            <li class="nav_item active has_child">
+              Home
               <span class="icon icon-down-arrow"></span>
               <ul class="sub_menu">
-                <li class="sub_menu_item"><a href="">One</a></li>
-                <li class="sub_menu_item"><a href="">Two</a></li>
+                <li class="sub_menu_item"><a href="">Become a member</a></li>
+                <li class="sub_menu_item"><a href="">Watch the latest prayer</a></li>
+                <li class="sub_menu_item"><a href="">Listen to prayers</a></li>
+                <li class="sub_menu_item"><a href="">Submit a prayer</a></li>
+                <li class="sub_menu_item"><a href="">Share an answered prayer</a></li>
+                <li class="sub_menu_item"><a href="">Read prayers</a></li>
+                <li class="sub_menu_item"><a href="">Read prayers</a></li>
+                <li class="sub_menu_item"><a href="">Read prayers</a></li>
+                <li class="sub_menu_item"><a href="">Music for meditation and prayer</a></li>
               </ul>
             </li>
-
             <li class="nav_item">
               <a href="about_us.html">About Us</a>
             </li>
@@ -93,7 +96,7 @@
       <section class="intro-video-block">
         <div class="video">
           <div class="videoWrapper">
-            <iframe id="video-player" class="video" width="560" height="315" src="https://player.vimeo.com/video/405971419" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay"></iframe>
+            <iframe id="video-player" class="video" width="560" height="315" src="https://player.vimeo.com/video/545650080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay"></iframe>
           </div>
         </div>
         <div class="play-box">
@@ -150,17 +153,10 @@
               <div class="custom-select">
                 <select required onchange="setAudioFile(this)">
                   <option value="" hidden disabled selected>Select a prayer</option>
-                  <option value="http://www.justprayit.com/wp-content/uploads/Victory.mp3">Victory</option>
-                  <option value="http://www.justprayit.com/wp-content/uploads/Prayer_Heal-Our-Land.mp3">Heal Our Land</option>
-                  <option value="http://www.justprayit.com/wp-content/uploads/Prayer_testpositive.mp3">Corona Virus</option>
-                  <option value="http://www.justprayit.com/wp-content/uploads/Prayer_Lonely.mp3">Loneliness</option>
-                  <option value="http://www.justprayit.com/wp-content/uploads/Prayer_Caregiver.mp3">Caregiver</option>
-                  <option value="http://www.justprayit.com/wp-content/uploads/Prayer_members.mp3">Care Member</option>
-                  <option value="http://www.justprayit.com/wp-content/uploads/Provision-and-Care.mp3">Provision and Care</option>
-                  <option value="http://www.justprayit.com/wp-content/uploads/Prayer_Peace.mp3">Peace</option>
-                  <option value="http://www.justprayit.com/wp-content/uploads/Provision-and-Protection.mp3">Provision and Protection</option>
-                  <option value="http://www.justprayit.com/wp-content/uploads/I-Am-The-Lord-Your-God.mp3">I Am The Lord Your God</option>
-                  <option value="http://www.justprayit.com/wp-content/uploads/Prayer_Grieving.mp3">Prayer for Grieving</option>
+                  <option value="audio/Victory.mp3">Victory</option>
+                  <option value="audio/Prayer_Heal-Our-Land.mp3">Heal Our Land</option>
+                  <option value="audio/Prayer_testpositive.mp3">Corona Virus</option>
+                  <option value="audio/Prayer_Grieving.mp3">Prayer for Grieving</option>
                 </select>
               </div>
             </div>
@@ -453,12 +449,15 @@
 <!--vimeo-->
 <script src="https://player.vimeo.com/api/player.js"></script>
 
+<!--pop-ups-->
+<script src="libs/micromodal.min.js"></script>
+<!--tool-tip-->
+<script src="libs/tooltip.min.js"></script>
+
 <!--slider-->
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="js/slider_filter.js"></script>
-<!--pop-ups-->
-<script src="libs/micromodal.min.js"></script>
 
 <script src="js/main.js"></script>
 </body>
