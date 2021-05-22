@@ -13,7 +13,7 @@ MicroModal.init('modal-3');
 			$('.burger').removeClass('active');
 			$('.menu_content').removeClass('active');
 			$('body').removeClass('no_scroll');
-			if ($(window).width() <= 767) {
+			if ($(window).width() <= 991) {
 				$('.sub_menu').slideUp(300);
 			}
 		}
@@ -22,7 +22,7 @@ MicroModal.init('modal-3');
 
 // Mobile submenu
 	$('.nav_item.has_child').on('click', function(){
-		if ($(window).width() <= 767) {
+		if ($(window).width() <= 991) {
 			if ($(this).find('.sub_menu').css('display') == 'block') {
 				$('.sub_menu').slideUp(300);
 			} else {
@@ -74,5 +74,25 @@ btnUp.on('click', function(e) {
 });
 
 
+//scroll to elements
+function scrollToElement(elementObj, intPaddingTop, intSpeedScroll) {
 
+    intPaddingTop = intPaddingTop || 10; /* Default 10px */
+    intSpeedScroll = intSpeedScroll || 200 /* Default 200ms */
+    var scrollTop = $(elementObj).offset().top - intPaddingTop;
 
+    $('html, body').animate({
+        scrollTop: scrollTop
+    }, intSpeedScroll);
+}
+
+//click
+$('.sub_menu_item_link[href^="#"]').on('click', function(event) {
+    event.preventDefault();
+
+    $('.burger').removeClass('active');
+    $('.menu_content').removeClass('active');
+    $('body').removeClass('no_scroll');
+
+    scrollToElement($(this).attr('href'));
+});
