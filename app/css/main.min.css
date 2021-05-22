@@ -692,19 +692,21 @@
   width: 33px;
   height: 33px;
   border: solid 1px #13294A;
-  position: relative; }
-  .btn-flag:after {
-    content: "\e90b";
-    position: absolute;
-    font-family: icomoon;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%); }
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .btn-flag .icon-flag {
+    padding: 5px;
+    display: block; }
   .btn-flag:hover {
     background-color: #13294A; }
-    .btn-flag:hover:after {
+    .btn-flag:hover .icon-flag {
       color: white; }
 
 #btn-up {
@@ -1054,6 +1056,122 @@
   .swiper-button-next {
     display: none; } }
 
+.qtip {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-style: normal; }
+  .qtip:before {
+    content: attr(data-tip);
+    font-size: 14px;
+    position: absolute;
+    background: #A9C370;
+    color: white;
+    line-height: 1.2;
+    padding: 0.5em;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    min-width: 200px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    letter-spacing: 0;
+    font-weight: 300;
+    text-transform: initial; }
+  .qtip:after {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    content: '';
+    position: absolute;
+    opacity: 0;
+    visibility: hidden; }
+  .qtip:hover:before, .qtip:hover:after {
+    visibility: visible;
+    opacity: 1; }
+
+.qtip.tip-top:before {
+  top: -5px;
+  left: 50%;
+  -webkit-transform: translate(-50%, calc(-100% - 8px));
+      -ms-transform: translate(-50%, calc(-100% - 8px));
+          transform: translate(-50%, calc(-100% - 8px));
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-border-radius: 3px;
+          border-radius: 3px; }
+
+.qtip.tip-top:after {
+  border-width: 8px 8px 0 8px;
+  border-color: #A9C370 transparent transparent transparent;
+  top: -13px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0); }
+
+.qtip.tip-bottom:before {
+  bottom: -5px;
+  left: 50%;
+  -webkit-transform: translate(-50%, calc(100% + 8px));
+      -ms-transform: translate(-50%, calc(100% + 8px));
+          transform: translate(-50%, calc(100% + 8px));
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-border-radius: 3px;
+          border-radius: 3px; }
+
+.qtip.tip-bottom:after {
+  border-width: 0 8px 8px 8px;
+  border-color: transparent transparent #A9C370 transparent;
+  bottom: -13px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0); }
+
+.qtip.tip-left:before {
+  left: -5px;
+  top: 50%;
+  -webkit-transform: translate(calc(-100% - 8px), -50%);
+      -ms-transform: translate(calc(-100% - 8px), -50%);
+          transform: translate(calc(-100% - 8px), -50%);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-border-radius: 3px;
+          border-radius: 3px; }
+
+.qtip.tip-left:after {
+  border-width: 8px 0 8px 8px;
+  border-color: transparent transparent transparent #A9C370;
+  left: -13px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%); }
+
+.qtip.tip-right:before {
+  right: -5px;
+  top: 50%;
+  -webkit-transform: translate(calc(100% + 8px), -50%);
+      -ms-transform: translate(calc(100% + 8px), -50%);
+          transform: translate(calc(100% + 8px), -50%);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-border-radius: 3px;
+          border-radius: 3px; }
+
+.qtip.tip-right:after {
+  border-width: 8px 8px 8px 0;
+  border-color: transparent #A9C370 transparent transparent;
+  right: -13px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%); }
+
 /*-- FOOTER --*/
 .footer {
   background: #13294A; }
@@ -1179,7 +1297,7 @@ button, .btn {
     background: #13294A;
     color: #ffffff; }
 
-.animate, .sub_menu, .sub_menu_item, a, button, .btn {
+.animate, .sub_menu, .sub_menu_item, .qtip:before, .qtip:after, a, button, .btn {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }

@@ -1,0 +1,110 @@
+.qtip {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-style: normal;
+  &:before {
+    content: attr(data-tip);
+    font-size: 14px;
+    position: absolute;
+    background: $accent;
+    color: white;
+    line-height: 1.2;
+    padding: 0.5em;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    min-width: 200px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    @extend.animate;
+    letter-spacing: 0;
+    font-weight: 300;
+    text-transform: initial;
+  }
+  &:after {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    content: '';
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    @extend.animate;
+  }
+  &:hover {
+    &:before, &:after {
+      visibility: visible;
+      opacity: 1
+    }
+  }
+}
+
+.qtip.tip-top {
+  &:before {
+    top: -5px;
+    left: 50%;
+    transform: translate(-50%, calc(-100% - 8px));
+    box-sizing: border-box;
+    border-radius: 3px;
+  }
+  &:after {
+    border-width: 8px 8px 0 8px;
+    border-color: $accent transparent transparent transparent;
+    top: -13px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+
+.qtip.tip-bottom {
+  &:before {
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%, calc(100% + 8px));
+    box-sizing: border-box;
+    border-radius: 3px;
+  }
+  &:after {
+    border-width: 0 8px 8px 8px;
+    border-color: transparent transparent $accent transparent;
+    bottom: -13px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+
+.qtip.tip-left {
+  &:before {
+    left: -5px;
+    top: 50%;
+    transform: translate(calc(-100% - 8px), -50%);
+    box-sizing: border-box;
+    border-radius: 3px;
+  }
+  &:after {
+    border-width: 8px 0 8px 8px;
+    border-color: transparent transparent transparent $accent;
+    left: -13px;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+.qtip.tip-right {
+  &:before {
+    right: -5px;
+    top: 50%;
+    transform: translate(calc(100% + 8px), -50%);
+    box-sizing: border-box;
+    border-radius: 3px;
+  }
+  &:after {
+    border-width: 8px 8px 8px 0;
+    border-color: transparent $accent transparent transparent;
+    right: -13px;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+

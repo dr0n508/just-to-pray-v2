@@ -92,17 +92,16 @@
   height: 33px;
   border: solid 1px $text;
   position: relative;
-  &:after {
-    content: "\e90b";
-    position: absolute;
-    font-family: icomoon;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
+  display: flex;
+  align-items: center;
+  .icon-flag {
+    padding: 5px;
+    display: block;
+
   }
   &:hover {
     background-color: $text;
-    &:after {
+    .icon-flag {
       color: white;
     }
   }

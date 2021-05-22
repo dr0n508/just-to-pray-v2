@@ -16,18 +16,12 @@
 	<link rel="icon" href="img/favicon/favicon.ico">
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
 
-	<!-- Template Basic Images End -->
-
 	<!-- Custom Browsers Color -->
 	<meta name="theme-color" content="#3a66c7">
 
 	<!-- Style -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
-  <link rel='stylesheet' href='libs/tooltip.min.css'>
 
 	<link rel="stylesheet" href="css/main.min.css">
 </head>
@@ -264,13 +258,16 @@
                       mental health issues and finds a job and a place to
                       live</p>
                     <p class="date">May 17, 2021</p>
-                    <button class="btn-color" onclick="return countPrayer(this)" data-count="0">Pray</button>
+
+                    <button class="btn-color qtip tip-top" data-tip="Click to pray for this member" data-count="0">Pray</button>
                   </div>
 
                   <div class="footer-prayer">
                     <div class="spacer"></div>
                     <p class="number-prayers"><span>9</span> Prayers</p>
-                    <a href="#" class="btn-flag" onclick="return flagPrayer(this)"></a>
+                    <a href="#" class="btn-flag  qtip tip-left" data-tip="Click the flag if this prayer is offensive and needs to be reviewed">
+                      <span class="icon-flag"></span>
+                    </a>
                   </div>
                 </div>
             </div>
@@ -286,13 +283,15 @@
                       mental health issues and finds a job and a place to
                       live</p>
                     <p class="date">March 08, 2021</p>
-                    <button class="btn-color" data-count="0">Rejoice</button>
+                    <button class="btn-color qtip tip-top" data-tip="Click to rejoice with this member" data-count="0">Rejoice</button>
                   </div>
 
                   <div class="footer-prayer">
                     <div class="spacer"></div>
                     <p class="number-prayers"><span>7</span> Rejoicing</p>
-                    <a href="#" class="btn-flag"></a>
+                    <a href="#" class="btn-flag  qtip tip-left" data-tip="Click the flag if this prayer is offensive and needs to be reviewed">
+                      <span class="icon-flag"></span>
+                    </a>
                   </div>
                 </div>
             </div>
@@ -307,13 +306,15 @@
                     mental health issues and finds a job and a place to
                     live</p>
                   <p class="date">March 08, 2021</p>
-                  <button class="btn-color" onclick="return countPrayer(this)" data-count="0">Pray</button>
+                  <button class="btn-color qtip tip-top" data-tip="Click to pray for this member" data-count="0">Pray</button>
                 </div>
 
                 <div class="footer-prayer">
                   <div class="spacer"></div>
                   <p class="number-prayers"><span>9</span> Prayers</p>
-                  <a href="#" class="btn-flag" onclick="return flagPrayer(this)"></a>
+                  <a href="#" class="btn-flag  qtip tip-left" data-tip="Click the flag if this prayer is offensive and needs to be reviewed">
+                    <span class="icon-flag"></span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -328,13 +329,15 @@
                       mental health issues and finds a job and a place to
                       live</p>
                     <p class="date">March 08, 2021</p>
-                    <button class="btn-color" data-count="0">Rejoice</button>
+                    <button class="btn-color qtip tip-top" data-tip="Click to rejoice with this member" data-count="0">Rejoice</button>
                   </div>
 
                   <div class="footer-prayer">
                     <div class="spacer"></div>
                     <p class="number-prayers"><span>7</span> Rejoicing</p>
-                    <a href="#" class="btn-flag"></a>
+                    <a href="#" class="btn-flag  qtip tip-left" data-tip="Click the flag if this prayer is offensive and needs to be reviewed">
+                      <span class="icon-flag"></span>
+                    </a>
                   </div>
                 </div>
             </div>
@@ -451,8 +454,6 @@
 
 <!--pop-ups-->
 <script src="libs/micromodal.min.js"></script>
-<!--tool-tip-->
-<script src="libs/tooltip.min.js"></script>
 
 <!--slider-->
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
