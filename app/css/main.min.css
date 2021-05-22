@@ -524,7 +524,8 @@
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    overflow: hidden; }
+    overflow: auto;
+    max-height: 100vh; }
     .menu_content.active {
       opacity: 1;
       visibility: visible; }
