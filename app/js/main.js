@@ -89,10 +89,10 @@ function scrollToElement(elementObj, intPaddingTop, intSpeedScroll) {
 //click
 $('.sub_menu_item_link[href^="#"]').on('click', function(event) {
     event.preventDefault();
-
+    //
     $('.burger').removeClass('active');
     $('.menu_content').removeClass('active');
     $('body').removeClass('no_scroll');
-
+    //
     scrollToElement($(this).attr('href'));
 });
