@@ -379,6 +379,10 @@
     .nav_item a {
       padding-bottom: 5px;
       border-bottom: solid 3px transparent; }
+  .nav .text-menu-item {
+    padding-bottom: 5px; }
+  .nav_item.active .text-menu-item {
+    border-bottom: solid 3px #A9C370; }
   .nav_item.active a {
     border-bottom: solid 1px #A9C370; }
   .nav .line {
@@ -482,7 +486,9 @@
     left: 50%; }
 
 @media (min-width: 992px) {
-  .nav_item:hover a {
+  .nav_item:hover .text-menu-item {
+    border-bottom: 3px solid #A9C370; }
+  .nav_item.has_child:hover a {
     border-bottom: 1px solid #A9C370; } }
 
 @media (max-width: 991px) {
@@ -1504,6 +1510,17 @@ h2.h2 {
     .join-section {
       padding: 100px 0 70px; } }
 
+.join-section.show-small-mobile {
+  padding: 0;
+  background-color: #F6F6F6; }
+  .join-section.show-small-mobile .wrapper {
+    background-color: white; }
+    .join-section.show-small-mobile .wrapper article {
+      padding: 35px 15px 0 15px; }
+    .join-section.show-small-mobile .wrapper .btn-color {
+      width: 100%;
+      margin-bottom: 0; }
+
 .query-section {
   background-color: #F6F6F6;
   padding: 100px 0;
@@ -1560,9 +1577,8 @@ h2.h2 {
             padding: 40px 28px 28px 28px; } }
 
 .media-section {
-  background-color: #F6F6F6;
-  padding: 100px 0;
-  margin-bottom: 100px; }
+  background-color: white;
+  padding: 100px 0; }
   .media-section .container {
     max-width: 1010px; }
   .media-section ul {
@@ -1582,7 +1598,9 @@ h2.h2 {
       padding: 0 20px; }
       .media-section ul li .item-list {
         background-color: white;
-        text-align: center; }
+        text-align: center;
+        -webkit-box-shadow: 0px 4px 62px 0px #e5e5e5;
+                box-shadow: 0px 4px 62px 0px #e5e5e5; }
         .media-section ul li .item-list .image-wrapper img {
           width: 100%;
           height: auto; }
@@ -1598,27 +1616,19 @@ h2.h2 {
           color: white; }
         .media-section ul li .item-list.post-w-btn:hover h3.h3-underline:after {
           background: #13294A; }
-    .media-section ul li:first-child .item-list {
-      margin-top: 20px;
-      margin-bottom: 20px; }
-    .media-section ul li:nth-child(2) .item-list {
-      margin-top: 80px;
-      margin-bottom: 80px; }
-    .media-section ul li:nth-child(3) .item-list {
-      margin-top: 60px;
-      margin-bottom: 20px; }
-    .media-section ul li:nth-child(4) .item-list {
-      margin-top: 0;
-      margin-bottom: 20px; }
   @media (max-width: 767px) {
     .media-section {
-      margin-bottom: 0; }
+      background-color: #F6F6F6;
+      margin-bottom: 0;
+      padding: 70px 0; }
       .media-section ul li {
         padding: 0;
         width: 100%; }
         .media-section ul li .item-list {
           margin-top: 20px !important;
-          margin-bottom: 20px !important; }
+          margin-bottom: 20px !important;
+          -webkit-box-shadow: none;
+                  box-shadow: none; }
           .media-section ul li .item-list .text-block {
             padding: 40px 28px 28px 28px; } }
 
@@ -1627,28 +1637,48 @@ h2.h2 {
   max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: -200px;
-  padding: 90px 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../img/prayers-copy-bg.jpg") no-repeat 50% 50%;
-  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/prayers-copy-bg.jpg") no-repeat 50% 50%;
-  background: -o-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/prayers-copy-bg.jpg") no-repeat 50% 50%;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/prayers-copy-bg.jpg") no-repeat 50% 50%;
+  margin-bottom: -240px;
+  padding: 40px 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(238, 238, 238, 0.9)), to(rgba(238, 238, 238, 0.9))), url("../img/prayers-copy-bg.jpg") no-repeat 50% 50%;
+  background: -webkit-linear-gradient(rgba(238, 238, 238, 0.9), rgba(238, 238, 238, 0.9)), url("../img/prayers-copy-bg.jpg") no-repeat 50% 50%;
+  background: -o-linear-gradient(rgba(238, 238, 238, 0.9), rgba(238, 238, 238, 0.9)), url("../img/prayers-copy-bg.jpg") no-repeat 50% 50%;
+  background: linear-gradient(rgba(238, 238, 238, 0.9), rgba(238, 238, 238, 0.9)), url("../img/prayers-copy-bg.jpg") no-repeat 50% 50%;
   -webkit-background-size: cover;
           background-size: cover; }
   .prayers-copy .container {
-    max-width: 800px;
     margin-right: auto;
-    margin-left: auto; }
+    margin-left: auto;
+    padding-right: 40px;
+    padding-left: 40px; }
+    .prayers-copy .container .wrapper {
+      border: solid 1px #13294A;
+      padding: 70px 130px; }
   .prayers-copy .h2 {
-    color: white;
     text-align: center; }
   .prayers-copy p {
-    color: white;
     text-align: center; }
+  .prayers-copy blockquote {
+    margin-top: 40px; }
+  @media (max-width: 992px) {
+    .prayers-copy {
+      padding: 90px 0;
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../img/prayers-copy-bg.jpg") no-repeat 50% 50%;
+      background: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/prayers-copy-bg.jpg") no-repeat 50% 50%;
+      background: -o-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/prayers-copy-bg.jpg") no-repeat 50% 50%;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/prayers-copy-bg.jpg") no-repeat 50% 50%;
+      -webkit-background-size: cover;
+              background-size: cover; }
+      .prayers-copy .container .wrapper {
+        border: none;
+        padding: 0; }
+      .prayers-copy .h2 {
+        color: white; }
+      .prayers-copy p {
+        color: white; } }
 
 .prayer-details {
   background-color: #F6F6F6;
-  padding: 300px 0 100px; }
+  padding: 340px 0 100px; }
   .prayer-details .container {
     max-width: 1010px; }
   .prayer-details .swiper-prayers {
@@ -1699,6 +1729,7 @@ h2.h2 {
       padding: 20px 30px; } }
 
 .music-for-meditation {
+  background-color: #F6F6F6;
   padding: 100px 0 125px; }
   .music-for-meditation .container {
     max-width: 1010px;
@@ -1734,21 +1765,36 @@ h2.h2 {
               transform: translateY(-70px); } }
   @media (max-width: 768px) {
     .music-for-meditation {
-      padding: 100px 0 0px; } }
+      background-color: white;
+      padding: 70px 0 0px; } }
 
 /* Always at the end*/
 .hide-mobile {
   display: block; }
 
+.hide-small-mobile {
+  display: block; }
+
 .show-mobile {
+  display: block; }
+
+.show-small-mobile {
   display: block; }
 
 @media (max-width: 991px) {
   .hide-mobile {
     display: none; } }
 
+@media (max-width: 767px) {
+  .hide-small-mobile {
+    display: none; } }
+
 @media (min-width: 992px) {
   .show-mobile {
+    display: none; } }
+
+@media (min-width: 768px) {
+  .show-small-mobile {
     display: none; } }
 
 /*# sourceMappingURL=css/main.min.css.map */

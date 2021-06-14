@@ -44,6 +44,12 @@
       border-bottom: solid 3px transparent;
     }
   }
+  .text-menu-item{
+    padding-bottom: 5px;
+  }
+  &_item.active .text-menu-item{
+    border-bottom: solid 3px $accent;
+  }
   &_item.active a {
     border-bottom: solid 1px $accent;
   }
@@ -145,9 +151,14 @@
 
 @media (min-width: 992px) {
   .nav {
-    &_item {
-      &:hover a {
-        border-bottom: 1px solid $accent;
+    &_item:hover .text-menu-item {
+      border-bottom: 3px solid $accent;
+    }
+    &_item.has_child {
+      &:hover {
+        a {
+          border-bottom: 1px solid $accent;
+        }
       }
     }
   }
@@ -215,7 +226,6 @@
 ////////////////////////////
 .sub_menu {
   position: absolute;
-  //background: $text;
   background: #183663;
   top: 100%;
   left: 0;
@@ -244,9 +254,6 @@
   .nav {
     &_item {
       &:hover {
-        //background: #f4f4f4;
-        //color: #000;
-        //border-top: 2px solid $accent;
         .sub_menu {
           opacity: 1;
           visibility: visible;
@@ -264,8 +271,6 @@
     position: static;
     width: 100%;
     transition: none;
-    //border-top: 1px solid #e2e2e2;
-    //border-bottom: 1px solid #e2e2e2;
     border-top: 1px solid $accent;
     margin-top: 15px;
   }

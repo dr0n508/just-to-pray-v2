@@ -58,7 +58,6 @@ body {
 
 .main {
 	flex: 1 0 auto;
-	//padding-top: 90px;
 }
 .footer {
 	flex: 0 0 auto;
@@ -161,7 +160,6 @@ p {
     position: absolute;
     content: "";
     bottom: -20px;
-
     display: block;
     width: 58px;
     height: 3px;
@@ -310,7 +308,6 @@ h2.h2 {
   }
 }
 
-
 //////////////////join-section///////////////////
 /////////////////////////////////////////////////
 .join-section {
@@ -325,6 +322,20 @@ h2.h2 {
   }
 }
 
+.join-section.show-small-mobile {
+  padding: 0;
+  background-color: #F6F6F6;
+  .wrapper {
+    background-color: white;
+    article {
+      padding: 35px 15px 0 15px;
+    }
+    .btn-color {
+      width: 100%;
+      margin-bottom: 0;
+    }
+  }
+}
 
 //////////////////query-section//////////////////
 /////////////////////////////////////////////////
@@ -393,9 +404,8 @@ h2.h2 {
 //////////////////media-section//////////////////
 /////////////////////////////////////////////////
 .media-section {
-  background-color: #F6F6F6;
+  background-color: white;
   padding: 100px 0;
-  margin-bottom: 100px;
   .container {
     max-width: 1010px;
   }
@@ -409,6 +419,7 @@ h2.h2 {
       .item-list {
         background-color: white;
         text-align: center;
+        box-shadow: 0px 4px 62px 0px #e5e5e5;
         .image-wrapper {
           img {
             width: 100%;
@@ -429,26 +440,11 @@ h2.h2 {
         h3.h3-underline:after { background: $text; }
       }
     }
-    li:first-child .item-list {
-      margin-top: 20px;
-      margin-bottom: 20px;
-    }
-    li:nth-child(2) .item-list {
-      margin-top: 80px;
-      margin-bottom: 80px;
-
-    }
-    li:nth-child(3) .item-list {
-      margin-top: 60px;
-      margin-bottom: 20px;
-    }
-    li:nth-child(4) .item-list {
-      margin-top: 0;
-      margin-bottom: 20px;
-    }
   }
   @media (max-width: 767px) {
+    background-color: #F6F6F6;
     margin-bottom: 0;
+    padding: 70px 0;
     ul {
       li {
         padding: 0;
@@ -456,6 +452,7 @@ h2.h2 {
         .item-list {
           margin-top: 20px !important;
           margin-bottom: 20px !important;
+          box-shadow: none;
           .text-block {
             padding: 40px 28px 28px 28px;
           }
@@ -473,22 +470,45 @@ h2.h2 {
   max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: -200px;
-  padding: 90px 0;
-  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),url("../img/prayers-copy-bg.jpg") no-repeat 50% 50%;
+  margin-bottom: -240px;
+  padding: 40px 0;
+  background: linear-gradient(rgba(238,238,238,.9), rgba(238,238,238,.9)),url("../img/prayers-copy-bg.jpg") no-repeat 50% 50%;
   background-size: cover;
   .container {
-    max-width: 800px;
     margin-right: auto;
     margin-left: auto;
+    padding-right: 40px;
+    padding-left: 40px;
+    .wrapper {
+      border: solid 1px $text;
+      padding: 70px 130px;
+    }
   }
   .h2 {
-    color: white;
     text-align: center;
   }
   p {
-    color: white;
     text-align: center;
+  }
+  blockquote {
+    margin-top: 40px;
+  }
+  @media (max-width: 992px) {
+    padding: 90px 0;
+    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),url("../img/prayers-copy-bg.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    .container {
+      .wrapper {
+        border: none;
+        padding: 0;
+      }
+    }
+    .h2 {
+      color: white;
+    }
+    p {
+      color: white;
+    }
   }
 }
 
@@ -496,7 +516,7 @@ h2.h2 {
 /////////////////////////////////////////////////
 .prayer-details {
   background-color: #F6F6F6;
-  padding: 300px 0 100px;
+  padding: 340px 0 100px;
   .container { max-width: 1010px; }
   .swiper-prayers { margin-bottom: 100px;}
   .prayer {
@@ -542,6 +562,7 @@ h2.h2 {
 ///////////requests-section-secondary////////////
 /////////////////////////////////////////////////
 .music-for-meditation {
+  background-color: #F6F6F6;
   padding: 100px 0 125px;
   .container {
     max-width: 1010px;
@@ -580,7 +601,8 @@ h2.h2 {
     }
   }
   @media (max-width: 768px) {
-    padding: 100px 0 0px;
+    background-color: white;
+    padding: 70px 0 0px;
   }
 }
 
@@ -591,7 +613,15 @@ h2.h2 {
   display: block;
 }
 
+.hide-small-mobile {
+  display: block;
+}
+
 .show-mobile {
+  display: block;
+}
+
+.show-small-mobile {
   display: block;
 }
 
@@ -599,8 +629,17 @@ h2.h2 {
   .hide-mobile { display: none; }
 }
 
+@media (max-width: 767px) {
+  .hide-small-mobile { display: none; }
+}
+
 @media (min-width: 992px) {
   .show-mobile { display: none; }
 }
+
+@media (min-width: 768px) {
+  .show-small-mobile { display: none; }
+}
+
 
 
